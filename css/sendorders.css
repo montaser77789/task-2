@@ -586,7 +586,7 @@ body {
         max-height: none;
         overflow-y: auto;
         overflow-x: auto;
-        width:  314px;
+        max-width:  314px;
 
 
     }
