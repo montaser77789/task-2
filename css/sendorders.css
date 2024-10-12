@@ -36,6 +36,7 @@
     border: none;
     outline: none;
 }
+
 body {
     overflow-x: hidden;
 }
@@ -465,6 +466,9 @@ body {
     .progress-line {
         display: none;
     }
+    .form-control{
+        width: 100% ;
+    }
 }
 
 
@@ -571,13 +575,15 @@ body {
     background: var(--Gray-white, #FFFFFF);
     border: 1px solid var(--Gray-3, #CED4DA)
 }
-.step-2-buttons{
+
+.step-2-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
+
 .form-control {
     border-radius: 8px;
     border: 1px solid #CED4DA;
@@ -597,12 +603,17 @@ body {
 
 /* Table customization */
 .table-responsive {
-    max-height: 60vh; /* يمكنك تعديل الارتفاع حسب الحاجة */
-    overflow-y: auto; /* تمكين التمرير العمودي */
-    overflow-x: auto; /* تمكين التمرير الأفقي */
+    max-height: 60vh;
+    /* يمكنك تعديل الارتفاع حسب الحاجة */
+    overflow-y: auto;
+    /* تمكين التمرير العمودي */
+    overflow-x: auto;
+    /* تمكين التمرير الأفقي */
 }
+
 .table {
-    width: 100%; /* تأكد من أن الجدول يشغل العرض الكامل */
+    width: 100%;
+    /* تأكد من أن الجدول يشغل العرض الكامل */
 }
 
 .badge {
@@ -634,9 +645,20 @@ body {
         font-size: 0.8rem;
         /* Adjust button font size for smaller screens */
     }
+
     .table-responsive {
         max-height: none;
+        overflow-y: auto;
+        overflow-x: auto;
+
     }
+
+    .table {
+        width: 100%;
+
+    }
+
+
 }
 
 .nav-dashboard {
@@ -721,11 +743,12 @@ body {
         font-size: 0.8rem;
         /* Adjust font size for total pages */
     }
+
     .svg-filter {
         width: 10px;
         height: 10px;
     }
-    
+
 }
 
 .table th,
@@ -771,6 +794,7 @@ body {
     background: var(--Gray-white, #FFFFFF);
     border: 1px solid var(--Gray-3, #CED4DA)
 }
+
 /* .fa-arrow-lef{
     padding-left: 20px !important;	
 } */
