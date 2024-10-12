@@ -1,0 +1,389 @@
+@font-face {
+    font-family: "Swissra Heavy";
+    src: url("../font/alfont_com_AlFont_com_Swissra-Heavy.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Swissra Light";
+    src: url("../font/alfont_com_AlFont_com_Swissra-Light-1.otf")
+      format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-ligth {
+    font-family: "Swissra Light";
+    font-weight: normal;
+  }
+  .font-heavy {
+    font-family: "Swissra Light";
+    font-weight: bold;
+  }
+  
+  
+  
+  * {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Swissra Heavy", sans-serif;
+    direction: rtl;
+    border: none;
+    outline: none;
+  }
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    z-index: 1000;
+  
+    top: 0;
+    right: 0;
+  
+  }
+  
+  .sidebar.collapsed {
+    width: 80px;
+  }
+  
+  .sidebar {
+    position: fixed;
+  }
+  
+  .toggle-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    background: #1A7588;
+    color: white;
+    border-radius: 8px;
+    position: absolute;
+    left: -10px;
+  }
+  
+  #sidebar.collapsed {
+    width: 80px;
+  }
+  
+  .sidebar .nav-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .nav-link i {
+    margin-right: 10px; 
+  }
+  
+  .sidebar.collapsed .nav-link span {
+    display: none; 
+  }
+  
+  .sidebar.collapsed .nav-link i {
+    margin: 0; /* No margin for icon when collapsed */
+  }
+  
+  #main-content {
+    flex-grow: 1;
+    transition: margin-right 0.3s ease;
+  }
+  
+  /* .sidebar.collapsed + #main-content {
+    margin-right: 80px;
+  } */
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: fit-content;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      transition: right 0.5s ease; 
+  }
+  
+  .addproduct-content{
+    padding-right: 74px;
+  }
+  
+    .sidebar.collapsed {
+        width: 0px;
+    }
+    .table-container{
+        margin-right: 60px;
+    }
+  
+    .toggle-btn {
+        left: -5px; 
+    }
+  
+    .sidebar .nav-link i {
+        margin-right: 5px; 
+    }
+  
+    #main-content {
+        margin-right: 60px;  
+    }
+  
+    /* .sidebar.collapsed + #main-content {
+        margin-right: 60px;
+    } */
+  
+    .toggle-btn {
+        font-size: 1.2rem; 
+    }
+    #sidebar.collapsed {
+        width: 60px;
+    }
+  }
+  
+  .nav-sidebar {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+  .nav-dashboard {
+  
+    background: #E9ECEF;
+    padding: 10px;
+  
+  }
+  
+  .nav-item {
+    padding: 10px;
+  
+  }
+  
+  .nav-item a svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nav-item:hover {
+    background: #E9ECEF;
+  }
+  #toggle-btn {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* تأثير الدوران */
+    padding: 4px 6px;
+  }
+  
+  #toggle-btn.rotate {
+    transform: rotate(180deg); /* تدوير السهم بزاوية 90 درجة */
+  }
+  
+  #product-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .profile-info {
+    margin-left: 10px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .profile-info img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .profile-info svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .notification-icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  
+  /* Table customization */
+  .table-responsive {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .badge {
+    padding: 0.6em;
+    font-size: 0.9em;
+  }
+  
+  
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: -29px;
+   
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content div {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-content div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown-content img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  /* ////////////////////////navbar/////////////////////// */
+
+  .nav-sidebar {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+  .nav-dashboard {
+  
+    background: #E9ECEF;
+    padding: 10px;
+  
+  }
+  
+  .nav-item {
+    padding: 10px;
+  
+  }
+  
+  .nav-item a svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nav-item:hover {
+    background: #E9ECEF;
+  }
+  #toggle-btn {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* تأثير الدوران */
+    padding: 4px 6px;
+  }
+  
+  #toggle-btn.rotate {
+    transform: rotate(180deg); /* تدوير السهم بزاوية 90 درجة */
+  }
+  
+  #product-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .profile-info {
+    margin-left: 10px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .profile-info img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .profile-info svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .notification-icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  
+  /* Table customization */
+  .table-responsive {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .badge {
+    padding: 0.6em;
+    font-size: 0.9em;
+  }
+  
+  
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: -29px;
+   
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content div {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-content div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown-content img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
