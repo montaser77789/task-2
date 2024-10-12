@@ -36,15 +36,13 @@ window.onclick = function (event) {
 }
 
 
-let currentStep = 1;
-
-  function nextStep() {
-    // This function will handle the navigation for future steps
-    alert('الخطوة التالية لم يتم إعدادها بعد.');
-  }
-
-  function selectPackage(card) {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
-  }
+// Function to move to the next step
+function nextStep() {
+    // Hide step 1
+    document.getElementById('step-1').classList.remove('active');
+    document.getElementById('step-1').classList.add('d-none');
+    
+    // Show step 2
+    document.getElementById('step-2').classList.remove('d-none');
+    document.getElementById('step-2').classList.add('active');
+}
