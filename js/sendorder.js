@@ -58,6 +58,7 @@ function selectPackage(card) {
 // التحكم في الخطوات المستقبلية
 
 function nextStep() {
+    console.log('Next Step');
     // Hide step 1
     document.getElementById('step-1').classList.remove('active');
     document.getElementById('step-1').classList.add('d-none');
