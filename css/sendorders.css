@@ -36,6 +36,7 @@
     border: none;
     outline: none;
 }
+
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -49,6 +50,7 @@
 .sidebar.collapsed {
     width: 80px;
 }
+
 .toggle-btn {
     border: none;
     background: none;
@@ -118,7 +120,7 @@
         margin-right: 5px;
     }
 
- 
+
 
     /* .sidebar.collapsed + #main-content {
         margin-right: 60px;
@@ -282,9 +284,8 @@
 .circle {
     width: 30px;
     height: 30px;
-    background-color: #17a2b8;
     border-radius: 50%;
-    color: white;
+    background: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,6 +294,11 @@
     margin-top: -4px;
     position: relative;
     z-index: 1;
+}
+
+.circle.active {
+    background: #17a2b8;
+
 }
 
 .step-info {
@@ -335,24 +341,46 @@
 
 /* Horizontal line between circles */
 .progress-line {
-    width: 100%;
+    width: 50%;
+    /* Adjusted width to fit between steps */
     height: 4px;
-    background-color: #17a2b8;
-    /* Info color */
+    background: #D9D9D9;
     position: absolute;
     top: 50%;
     left: 0;
     z-index: 0;
 }
 
-.progress-step:first-child .progress-line,
-.progress-step:last-child .progress-line {
-    display: none;
+#progress-line-1 {
+    left: calc(3% - 20px);
+    /* Position between first and second step */
+}
+
+#progress-line-2 {
+    left: calc(52% - 20px);
+    /* Position between second and third step */
+}
+
+.progress-line.active {
+    background: #17a2b8;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    position: relative;
+    z-index: 1;
 }
 
 .circle.active {
-    background-color: #28a745;
+    background-color: #17a2b8;
 }
+
+
+
+
 
 .circle.inactive {
     background-color: #cccccc;
@@ -380,8 +408,12 @@
     .progress-line {
         display: none;
     }
-    .form-control{
-        width: 100% ;
+
+    .form-control {
+        width: 100% !important; 
+    }
+    .btn-add {
+        width: 100% !important; 
     }
 }
 
@@ -410,9 +442,11 @@
 .parent-content {
     margin-right: 60px;
 }
+
 .step {
     margin-top: 50px;
 }
+
 .step-content {
     display: flex;
     justify-content: center;
@@ -561,7 +595,7 @@
         max-height: none;
         overflow-y: auto;
         overflow-x: auto;
-        max-width:  314px;
+        max-width: 314px;
 
 
     }
@@ -696,3 +730,23 @@
 /* .fa-arrow-lef{
     padding-left: 20px !important;	
 } */
+.add-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-add {
+    width:  160px;
+    height:  40px;
+    padding: 10px;
+    font-size:  20px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    border: 1px ;
+    opacity: 0px;
+    background: var(--Gray-white, #FFFFFF);
+    border: 1px solid var(--Gray-3, #CED4DA)
+}

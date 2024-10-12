@@ -57,8 +57,16 @@ function selectPackage(card) {
 
 // التحكم في الخطوات المستقبلية
 
+let progressline1 = document.getElementById("progress-line-2") 
+let circle2 = document.getElementById("circle-2") 
+
+
 function nextStep() {
     console.log('Next Step');
+    progressline1.classList.add("active")
+    console.log(progressline1)
+    circle2.classList.add("active")
+
     // Hide step 1
     document.getElementById('step-1').classList.remove('active');
     document.getElementById('step-1').classList.add('d-none');
@@ -66,4 +74,18 @@ function nextStep() {
     // Show step 2
     document.getElementById('step-2').classList.remove('d-none');
     document.getElementById('step-2').classList.add('active');
+}
+function backStep() {
+    console.log('Back Step');
+    progressline1.classList.remove("active")
+    console.log(progressline1)
+    circle2.classList.remove("active")
+
+    // Hide step 2
+    document.getElementById('step-2').classList.remove('active');
+    document.getElementById('step-2').classList.add('d-none');
+
+    // Show step 1
+    document.getElementById('step-1').classList.remove('d-none');
+    document.getElementById('step-1').classList.add('active');
 }

@@ -106,7 +106,7 @@
                 <!-- Progress bar -->
                 <div class="progress-wrapper-container">
                     <div class="progress-step align-items-start">
-                        <div class="circle"></div>
+                        <div class="circle active" id="circle-1"></div>
                         <div class="step-info-1">
 
                             <p class="step-label">إخــــتر الباقــــة</p>
@@ -114,10 +114,10 @@
                         </div>
                     </div>
 
-                    <div class="progress-line"></div>
+                    <div class="progress-line" id="progress-line-1"></div>
 
                     <div class="progress-step align-items-center">
-                        <div class="circle"></div>
+                        <div class="circle" id="circle-2"></div>
                         <div class="step-info">
 
                             <p class="step-label">حـــدد المنتجات</p>
@@ -125,11 +125,11 @@
                         </div>
                     </div>
 
-                    <div class="progress-line"></div>
+                    <div class="progress-line" id="progress-line-2"></div>
 
 
                     <div class="progress-step align-items-end">
-                        <div class="circle"></div>
+                        <div class="circle" id="circle-1"></div>
                         <div class="step-info-3">
 
                             <p class="step-label">أكمـــل الدفع</p>
@@ -138,8 +138,8 @@
                     </div>
                 </div>
 
-
-                <!-- Step 1 - Combined Steps -->
+                <form>
+                         <!-- Step 1 - Combined Steps -->
                 <div class="step active" id="step-1">
                     <div class="step-content">
 
@@ -192,7 +192,7 @@
 
                             <!-- Button -->
                             <div class="d-flex justify-content-end">
-                                <button class="btn-next-1" onclick="nextStep()">التالي <i
+                                <button type="button" class="btn-next-1" onclick="nextStep()">التالي <i
                                         class="fa-solid fa-arrow-left"></i></button>
                             </div>
 
@@ -202,8 +202,12 @@
                 </div>
 
                 <!-- Placeholder for Step 2 (for future) -->
-                <div class="step d-none " id="step-2">
-                    <div class="step-content">
+                <div class="step d-none container " id="step-2">
+
+                    <div  class="add-product">
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="button" class="btn-add">اضف منتج <i class="fa-solid fa-plus"></i></button>
+                    </div>
 
 
                         <!-- Table -->
@@ -277,13 +281,15 @@
                         </nav>
 
                         <div class="step2-buttons">
-                            <button class="step2-btn-back"> <i class="fa-solid fa-arrow-right"></i>عوده</button>
+                            <button class="step2-btn-back" type="button" onclick="backStep()"> <i class="fa-solid fa-arrow-right"></i>عوده</button>
                             <button class="step2-btn-next">التالي<i class="fa-solid fa-arrow-left"></i></button>
                         </div>
                     </div>
 
+                </form>
+           
 
-                </div>
+
 
             </div>
 
