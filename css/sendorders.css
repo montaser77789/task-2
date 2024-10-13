@@ -22,6 +22,10 @@
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 
 * {
@@ -715,6 +719,13 @@
     border-radius: 8px;
     background: var(--Gray-2, #E9ECEF);
 
+    color: black;
+
+}
+
+.step2-btn-next a {
+    text-decoration: none;
+    color: black;
 }
 
 .step2-btn-back {
@@ -727,6 +738,7 @@
     background: var(--Gray-white, #FFFFFF);
     border: 1px solid var(--Gray-3, #CED4DA)
 }
+
 .step2-btn-back svg {
     padding-left: 20px !important;
 }
@@ -771,25 +783,36 @@
     margin: 10px;
 
 }
+
 .table-x {
     display: flex;
     align-items: center;
-    justify-content: center; /* يجعل الأيقونة في منتصف العمود */
+    justify-content: center;
+    /* يجعل الأيقونة في منتصف العمود */
 }
 
 .table-x svg {
-    font-size: 24px; /* حجم أيقونة الحذف */
-    color: white; /* لون الأيقونة */
-    background-color: var(--Danger-Click, #FF6157); /* لون الخلفية (لون التحذير) */
-    padding: 8px; /* مسافة داخلية حول الأيقونة */
-    border-radius: 8px; /* لجعل الخلفية دائرية */
-    transition: opacity 0.3s, transform 0.3s; /* إضافة تأثير عند التفاعل */
-    cursor: pointer; /* تغيير المؤشر عند تمرير الفأرة */
+    font-size: 24px;
+    /* حجم أيقونة الحذف */
+    color: white;
+    /* لون الأيقونة */
+    background-color: var(--Danger-Click, #FF6157);
+    /* لون الخلفية (لون التحذير) */
+    padding: 8px;
+    /* مسافة داخلية حول الأيقونة */
+    border-radius: 8px;
+    /* لجعل الخلفية دائرية */
+    transition: opacity 0.3s, transform 0.3s;
+    /* إضافة تأثير عند التفاعل */
+    cursor: pointer;
+    /* تغيير المؤشر عند تمرير الفأرة */
 }
 
 .table-x svg:hover {
-    opacity: 0.8; /* تقليل الشفافية عند التمرير */
-    transform: scale(1.1); /* تكبير الأيقونة قليلاً عند التمرير */
+    opacity: 0.8;
+    /* تقليل الشفافية عند التمرير */
+    transform: scale(1.1);
+    /* تكبير الأيقونة قليلاً عند التمرير */
 }
 
 
@@ -847,4 +870,13 @@
     .model-content {
         flex: 1 1 100%;
     }
+}
+
+.notification {
+    background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px; /* مسافة داخلية */
+    margin-bottom: 15px; /* مسافة سفلية */
+    border-radius: 5px; /* زوايا مستديرة */
+    text-align: center; /* توسيط النص */
 }

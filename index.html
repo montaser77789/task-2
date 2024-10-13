@@ -238,22 +238,8 @@
                                                     <th class="font-light"> </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <!-- Add rows here dynamically if needed -->
-                                        <tr class="text-right">
-                                            <td class="font-light">1</td>
-                                            <td class="font-light" > 
-                                                <img class="table-img" src="./images/Rectangle 1.png" alt="Profile"/>
-                                                مواد تجميل
-                                            </td>
-                                            <td class="font-light ">
-                                                القسم
-                                            </td>
-                                            <td class="font-light" ><input type="number" class="table-quantity" value="1"></td>
-                                            <td class="font-light"><input type="number" class="table-quantity" value="1"></td>
-                                            <td class="font-light  table-x"> <i class="fa-solid fa-x"></i> </td>
-                                        </tr>
-                                        <!-- Repeat for more orders -->
+                                    <tbody id="product-table-body">
+                                      
                                     </tbody>
                                 </table>
                             </div>
@@ -297,7 +283,7 @@
                         <div class="step2-buttons">
                             <button class="step2-btn-back" type="button" onclick="backStep()"> <i
                                     class="fa-solid fa-arrow-right"></i>عوده</button>
-                            <button class="step2-btn-next">التالي<i class="fa-solid fa-arrow-left"></i></button>
+                        <a class="step2-btn-next"  href="place.html">التالي <i class="fa-solid fa-arrow-left"></i></a>
                         </div>
                     </div>
 
@@ -313,51 +299,50 @@
 
     <!-- ////////////////modal....////////////// -->
     <!-- First Modal -->
-    <div class="modal  modal-xl fade" id="exampleModalToggle" aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+     <div id="notification" class="notification" style="display: none;">تم إضافة المنتج بنجاح!</div>
+
+    <div class="modal modal-xl fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalToggleLabel">اختر المنتجات</h5>
-                    <button type="button" class="btn-close text-left" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close text-left" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="modal-container">
-                            <div class="model-content">
-                                <img src="./images/Rectangle 1.png" alt="Profile" class="w-100" />
-                                <p class="text-center">مواد تجميل</p>
-                                <span >500/</span>
-                            </div>
-
-                            <div class="model-content">
-                                <img src="./images/Rectangle 1.png" alt="Profile" class="w-100" />
-                                <p class="text-center">مواد تجميل</p>
-                                <span >500/</span>
-                            </div>
-                            <div class="model-content">
-                                <img src="./images/Rectangle 1.png" alt="Profile" class="w-100" />
-                                <p class="text-center">مواد تجميل</p>
-                                <span >500/</span>
-                            </div>
-                            <div class="model-content">
-                                <img src="./images/Rectangle 1.png" alt="Profile" class="w-100" />
-                                <p class="text-center">مواد تجميل</p>
-                                <span >500/</span>
-                            </div>
-
+                        <div class="model-content">
+                            <img src="./images/Rectangle 1.png" alt="منتج 1" class="w-100" />
+                            <p class="text-center">منتج 1</p>
+                            <span>500 جنيهاً</span>
+                            <button class="btn-next-1 add-product-btn m-2" data-name="منتج 1" data-price="500">إضافة</button>
                         </div>
-                        <div class="step2-buttons">
-                            <button class="step2-btn-back mt-2"   data-bs-dismiss="modal"
-                            aria-label="Close" type="button" >تاكيد   <i class="fa-solid fa-arrow-left"></i>  </button>
+                        <div class="model-content">
+                            <img src="./images/Rectangle 1.png" alt="منتج 2" class="w-100" />
+                            <p class="text-center">منتج 2</p>
+                            <span>600 جنيهاً</span>
+                            <button class="btn-next-1 add-product-btn m-2" data-name="منتج 2" data-price="600">إضافة</button>
                         </div>
-
-
+                        <div class="model-content">
+                            <img src="./images/Rectangle 1.png" alt="منتج 3" class="w-100" />
+                            <p class="text-center">منتج 3</p>
+                            <span>700 جنيهاً</span>
+                            <button class="btn-next-1 add-product-btn m-2" data-name="منتج 3" data-price="700">إضافة</button>
+                        </div>
+                        <div class="model-content">
+                            <img src="./images/Rectangle 1.png" alt="منتج 4" class="w-100" />
+                            <p class="text-center">منتج 4</p>
+                            <span>800 جنيهاً</span>
+                            <button class="btn-next-1 add-product-btn m-2" data-name="منتج 4" data-price="800">إضافة</button>
+                        </div>
+                    </div>
+                    <div class="step2-buttons">
+                        <!-- <button class="step2-btn-back mt-2  " data-bs-dismiss="modal" id="confirm-button" aria-label="Close" type="button">تأكيد <i class="fa-solid fa-arrow-left"></i></button> -->
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
+</div>
 
 
     <!-- <a  href="#exampleModalToggle" role="button">Open first modal</a> -->
