@@ -410,10 +410,11 @@
     }
 
     .form-control {
-        width: 100% !important; 
+        width: 100% !important;
     }
+
     .btn-add {
-        width: 100% !important; 
+        width: 100% !important;
     }
 }
 
@@ -726,6 +727,9 @@
     background: var(--Gray-white, #FFFFFF);
     border: 1px solid var(--Gray-3, #CED4DA)
 }
+.step2-btn-back svg {
+    padding-left: 20px !important;
+}
 
 /* .fa-arrow-lef{
     padding-left: 20px !important;	
@@ -739,14 +743,108 @@
 }
 
 .btn-add {
-    width:  160px;
-    height:  40px;
-    padding: 10px;
-    font-size:  20px;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
     gap: var(--SpaceExtraSmall);
     border-radius: 8px;
-    border: 1px ;
+    border: 1px;
     opacity: 0px;
     background: var(--Gray-white, #FFFFFF);
     border: 1px solid var(--Gray-3, #CED4DA)
+}
+
+/* /////////////////modal//////////////////// */
+.table-img {
+    width: 50px;
+    height: 50px;
+}
+
+.table-quantity {
+    width: 168px;
+    height: 40px !important;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    background: var(--Gray-white, #FFFFFF);
+    border: 1px solid var(--Gray-3, #CED4DA);
+    margin: 10px;
+
+}
+.table-x {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* يجعل الأيقونة في منتصف العمود */
+}
+
+.table-x svg {
+    font-size: 24px; /* حجم أيقونة الحذف */
+    color: white; /* لون الأيقونة */
+    background-color: var(--Danger-Click, #FF6157); /* لون الخلفية (لون التحذير) */
+    padding: 8px; /* مسافة داخلية حول الأيقونة */
+    border-radius: 8px; /* لجعل الخلفية دائرية */
+    transition: opacity 0.3s, transform 0.3s; /* إضافة تأثير عند التفاعل */
+    cursor: pointer; /* تغيير المؤشر عند تمرير الفأرة */
+}
+
+.table-x svg:hover {
+    opacity: 0.8; /* تقليل الشفافية عند التمرير */
+    transform: scale(1.1); /* تكبير الأيقونة قليلاً عند التمرير */
+}
+
+
+.modal-header .btn-close {
+    padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
+    margin-left: 0;
+    /* Remove left margin */
+    margin-right: auto;
+    /* Push it to the far left */
+}
+
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Spacing between the items */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.model-content {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(50% - 10px);
+    /* Make each item take half of the width (minus gap) */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+    text-align: center;
+    /* Ensure text is centered */
+    border: 1px solid var(--Gray-4, #ADB5BD);
+    width: 100%;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+.model-content img {
+    width: 50px !important;
+    height: 50px;
+    border-radius: 2px;
+}
+
+.model-content p {
+    padding: 0px 10px;
+    margin: 0;
+    font-size: 14px;
+
+}
+
+.model-content span {
+    flex: 1;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .model-content {
+        flex: 1 1 100%;
+    }
 }
