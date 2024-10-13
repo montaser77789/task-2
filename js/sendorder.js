@@ -89,57 +89,118 @@ function backStep() {
     document.getElementById('step-1').classList.remove('d-none');
     document.getElementById('step-1').classList.add('active');
 }
-
-const productTableBody = document.getElementById('product-table-body');
-
-// إضافة وظيفة لإضافة المنتج إلى الجدول
 document.addEventListener('DOMContentLoaded', () => {
     const productTableBody = document.getElementById('product-table-body');
     const notification = document.getElementById('notification');
 
+    // مصفوفة لتخزين المنتجات المضافة
+    const addedProducts = [];
 
+    // وظيفة لتحديث حالة الأزرار في المودال بناءً على المنتجات في المصفوفة
+    const updateModalButtons = () => {
+        const addButtons = document.querySelectorAll('.add-product-btn, .remove-product-btn');
+        addButtons.forEach(button => {
+            const productName = button.getAttribute('data-name');
+            const isAdded = addedProducts.some(product => product.name === productName);
+
+            if (isAdded) {
+                button.innerText = 'حذف';
+                button.classList.add('remove-product-btn');
+                button.classList.remove('add-product-btn');
+            } else {
+                button.innerText = 'إضافة';
+                button.classList.add('add-product-btn');
+                button.classList.remove('remove-product-btn');
+            }
+        });
+    };
+
+    // التعامل مع أزرار الإضافة والحذف في المودال
     document.addEventListener('click', function (event) {
-        if (event.target.classList.contains('add-product-btn')) {
+        if (event.target.classList.contains('add-product-btn') || event.target.classList.contains('remove-product-btn')) {
             const productName = event.target.getAttribute('data-name');
             const productPrice = event.target.getAttribute('data-price');
 
-            const newRow = document.createElement('tr');
+            // تحقق مما إذا كان المنتج مضاف مسبقاً
+            const existingProductIndex = addedProducts.findIndex(product => product.name === productName);
 
-            newRow.innerHTML = `
-                <td class="font-light">1</td>
-                <td class="font-light">
-                    <img class="table-img" src="./images/Rectangle 1.png" alt="Profile"/>
-                    ${productName}
-                </td>
-                <td class="font-light">${productPrice}</td>
-                <td class="font-light"><input type="number" class="table-quantity" value="1"></td>
-                <td class="font-light"><input type="number" class="table-quantity" value="1"></td>
-                <td class="font-light table-x"><i class="fa-solid fa-x"></i></td>
-            `;
+            if (existingProductIndex === -1) {
+                // إضافة المنتج إلى المصفوفة
+                addedProducts.push({ name: productName, price: productPrice });
+                notification.textContent = 'تم إضافة المنتج بنجاح!';
+            } else {
+                // حذف المنتج من المصفوفة
+                addedProducts.splice(existingProductIndex, 1);
+                notification.textContent = 'تم حذف المنتج بنجاح!';
+            }
 
-            productTableBody.appendChild(newRow);
+            // تحديث حالة الأزرار في المودال
+            updateModalButtons();
 
-
-            // محاولة الحصول على المودال
-            // const modalElement = document.getElementById('exampleModalToggle');
-            // const modal = bootstrap.Modal.getInstance(modalElement);
-
-            // if (modal) {
-            //     modal.hide(); // إغلاق المودال
-            // } else {
-            //     console.error('Modal instance not found');
-            // }
-   notification.style.display = 'block';
-            notification.textContent = 'تم إضافة المنتج بنجاح!';
-            
             // إخفاء الرسالة بعد 3 ثواني
+            notification.style.display = 'block';
             setTimeout(() => {
                 notification.style.display = 'none';
             }, 3000);
-            const deleteBtn = newRow.querySelector('.table-x');
-            deleteBtn.addEventListener('click', () => {
-                productTableBody.removeChild(newRow);
-            });
         }
     });
+
+    // تأكيد إضافة المنتجات إلى الجدول
+    const confirmButton = document.getElementById('confirm-button');
+    if (confirmButton) {
+        confirmButton.addEventListener('click', () => {
+            // مسح الجدول قبل إعادة إضافة المنتجات
+            productTableBody.innerHTML = '';
+
+            addedProducts.forEach(product => {
+                const newRow = document.createElement('tr');
+
+                newRow.innerHTML = `
+                    <td class="font-light">1</td>
+                    <td class="font-light">
+                        <img class="table-img" src="./images/Rectangle 1.png" alt="Profile"/>
+                        ${product.name}
+                    </td>
+                    <td class="font-light">${product.price}</td>
+                    <td class="font-light"><input type="number" class="table-quantity" value="1"></td>
+                    <td class="font-light"><input type="number" class="table-quantity" value="1"></td>
+                    <td class="font-light table-x"><i class="fa-solid fa-x"></i></td>
+                `;
+
+                productTableBody.appendChild(newRow);
+
+                // إضافة زر الحذف لكل منتج في الجدول
+                const deleteBtn = newRow.querySelector('.table-x');
+                deleteBtn.addEventListener('click', () => {
+                    // حذف المنتج من الجدول
+                    productTableBody.removeChild(newRow);
+
+                    // تحديث المصفوفة بعد الحذف
+                    const productIndex = addedProducts.findIndex(p => p.name === product.name);
+                    if (productIndex !== -1) {
+                        addedProducts.splice(productIndex, 1);
+                    }
+
+                    // تحديث حالة الأزرار في المودال
+                    updateModalButtons();
+
+                    // عرض إشعار بعد الحذف
+                    notification.textContent = 'تم حذف المنتج من الجدول بنجاح!';
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                });
+            });
+
+            // إغلاق الـ modal بعد التأكيد
+            const modalElement = document.getElementById('exampleModalToggle');
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            if (modal) {
+                modal.hide();
+            } else {
+                console.error('Modal instance not found');
+            }
+        });
+    }
 });
