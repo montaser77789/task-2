@@ -430,10 +430,10 @@ a {
 }
 
 .circle {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #17a2b8;
+  background-color: #17a2b8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,8 +443,6 @@ a {
   position: relative;
   z-index: 1;
 }
-
-
 .step-info {
   max-width: 200px;
   text-align: center;
