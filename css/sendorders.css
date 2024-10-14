@@ -712,14 +712,15 @@ a {
 }
 
 .step2-btn-next {
-    width: 160pxpx;
-    height: 48pxpx;
+    width: 160px;
+    height: 48px;
     padding: 14px 14px;
     gap: var(--SpaceExtraSmall);
     border-radius: 8px;
     background: var(--Gray-2, #E9ECEF);
 
     color: black;
+    text-align: center;
 
 }
 

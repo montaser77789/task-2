@@ -163,8 +163,11 @@
                                 <li class="d-flex justify-content-between mb-2">
                                     <span class="font-heavy">سعر الخدمة</span><span>10 SAR</span>
                                 </li>
-                                <li class="d-flex justify-content-between mb-2 border-bottom">
+                                <li class="d-flex justify-content-between mb-2 ">
                                     <span class="font-heavy">ضريبة القيمة المضافة</span><span>10 SAR</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2 border-bottom">
+                                    <span class="font-heavy">قيمه الخصم</span><span>10 SAR</span>
                                 </li>
                                 <li class="d-flex justify-content-between fw-bold">
                                     <div class="d-flex flex-column flex-wrap">
@@ -181,45 +184,56 @@
                     </div>
                     <!-- Payment Info -->
                     <div class="col-lg-6 mb-3">
-                        <div class=" p-4">
+                        <div class="p-4">
                             <h2 class="mb-4 font-heavy">معلومات الدفع</h2>
-                            <form>
+                            <form id="paymentForm">
                                 <div class="mb-3">
                                     <label class="form-label">ادفع بـ</label>
                                     <div dir="rtl" class="d-flex align-items-center gap-3 flex-wrap">
-                                        <div dir="rtl" class=" me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card"
-                                                checked>
+                                        <div dir="rtl" class="me-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="card" checked>
                                             <label class="form-check-label" for="card">بطاقة دفع</label>
                                         </div>
                                         <div dir="rtl" class="me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod"
-                                            id="bankTransfer">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer" value="bankTransfer">
                                             <label class="form-check-label" for="bankTransfer">تحويل بنكي</label>
                                         </div>
                                         <div dir="rtl" class="me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod"
-                                            id="bank">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bank" value="bank">
                                             <label class="form-check-label" for="bank">حساب بنكي</label>
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!-- Card payment details -->
+                                <div id="cardDetails">
+                                    <div class="mb-3">
+                                        <label for="cardNumber" class="form-label">رقم البطاقة</label>
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="cvv" class="form-label">كود CVV</label>
+                                            <input type="text" class="form-control" id="cvv" placeholder="•••">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="expiryDate" class="form-label">تاريخ انتهاء الصلاحية</label>
+                                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Bank account file upload -->
+                                <div id="bankDetails" class="mb-3" style="display: none;">
+                                    <div class="mb-3">
+                                        <label for="cardNumber" class="form-label">رقم الحساب</label>
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="cardNumber" class="form-label">رقم البطاقة</label>
-                                    <input type="text" class="form-control" id="cardNumber"
-                                        placeholder="1234 5678 9012 3456">
+                                    <label for="bankFile" class="form-label">تحميل ملف الحساب البنكي</label>
+                                    <input type="file" class="form-control" id="bankFile">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="cvv" class="form-label">كود CVV</label>
-                                        <input type="text" class="form-control" id="cvv" placeholder="•••">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="expiryDate" class="form-label">تاريخ انتهاء الصلاحية</label>
-                                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
-                                    </div>
-                                </div>
+                        
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox" id="saveCard">
                                     <label class="form-check-label" for="saveCard">احفظ معلومات البطاقة</label>
