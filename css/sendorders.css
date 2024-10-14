@@ -495,7 +495,7 @@ a {
 .btn-next-1 {
     width: 160pxpx;
     height: 48pxpx;
-    padding: 14px 14px;
+    padding: 14px 30px;
     gap: var(--SpaceExtraSmall);
     border-radius: 8px;
     opacity: 0px;
