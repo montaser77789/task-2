@@ -36,11 +36,10 @@ window.onclick = function (event) {
 }
 
 
-document.getElementById('paymentForm').addEventListener('change', function(event) {
+document.getElementById('paymentForm').addEventListener('change', function (event) {
     const cardDetails = document.getElementById('cardDetails');
     const bankDetails = document.getElementById('bankDetails');
 
-    // Show/hide inputs based on the selected payment method
     if (event.target.name === 'paymentMethod') {
         if (event.target.value === 'bankTransfer') {
             cardDetails.style.display = 'none';

@@ -153,7 +153,8 @@
                             <div class="mb-3 border-bottom">
                                 <label for="discountCode" class="form-label">ادخل كوبون التخفيض</label>
                                 <div class="input-group">
-                                    <input disabled type="text" class="form-control" id="discountCode" placeholder="كود التخفيض">
+                                    <input disabled type="text" class="form-control" id="discountCode"
+                                        placeholder="كود التخفيض">
                                 </div>
                             </div>
                             <ul class="list-unstyled">
@@ -191,25 +192,29 @@
                                     <label class="form-label">ادفع بـ</label>
                                     <div dir="rtl" class="d-flex align-items-center gap-3 flex-wrap">
                                         <div dir="rtl" class="me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="card" checked>
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card"
+                                                value="card" checked>
                                             <label class="form-check-label" for="card">بطاقة دفع</label>
                                         </div>
                                         <div dir="rtl" class="me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer" value="bankTransfer">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="bankTransfer" value="bankTransfer">
                                             <label class="form-check-label" for="bankTransfer">تحويل بنكي</label>
                                         </div>
                                         <div dir="rtl" class="me-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bank" value="bank">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bank"
+                                                value="bank">
                                             <label class="form-check-label" for="bank">حساب بنكي</label>
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <!-- Card payment details -->
                                 <div id="cardDetails">
                                     <div class="mb-3">
                                         <label for="cardNumber" class="form-label">رقم البطاقة</label>
-                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                        <input type="text" class="form-control" id="cardNumber"
+                                            placeholder="1234 5678 9012 3456">
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
@@ -222,18 +227,19 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <!-- Bank account file upload -->
                                 <div id="bankDetails" class="mb-3" style="display: none;">
                                     <div class="mb-3">
                                         <label for="cardNumber" class="form-label">رقم الحساب</label>
-                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                        <input type="text" class="form-control" id="cardNumber"
+                                            placeholder="1234 5678 9012 3456">
                                     </div>
 
                                     <label for="bankFile" class="form-label">تحميل ملف الحساب البنكي</label>
                                     <input type="file" class="form-control" id="bankFile">
                                 </div>
-                        
+
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox" id="saveCard">
                                     <label class="form-check-label" for="saveCard">احفظ معلومات البطاقة</label>

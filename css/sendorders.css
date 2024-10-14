@@ -874,24 +874,32 @@ a {
 }
 
 .notification {
-    background-color: #4CAF50; /* لون الخلفية */
-    color: white; /* لون النص */
-    padding: 10px; /* مسافة داخلية */
-    margin-bottom: 15px; /* مسافة سفلية */
-    border-radius: 5px; /* زوايا مستديرة */
-    text-align: center; /* توسيط النص */
+    background-color: #4CAF50;
+    /* لون الخلفية */
+    color: white;
+    /* لون النص */
+    padding: 10px;
+    /* مسافة داخلية */
+    margin-bottom: 15px;
+    /* مسافة سفلية */
+    border-radius: 5px;
+    /* زوايا مستديرة */
+    text-align: center;
+    /* توسيط النص */
 }
-.input-group{
+
+.input-group {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  .button-submit {
+}
+
+.button-submit {
     width: 127px;
     height: 40px;
     padding: 10px 10px;
     border-radius: 8px 8px 8px 8px !important;
     gap: var(--SpaceExtraSmall);
     background: var(--Gray-2, #E9ECEF);
-  }
+}

@@ -21,7 +21,8 @@
   font-family: "Swissra Light";
   font-weight: bold;
 }
-a{
+
+a {
   text-decoration: none;
 
 }
@@ -420,7 +421,7 @@ a{
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 50px;
+  top: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,12 +586,14 @@ li {
   width: 50px;
   height: 50px;
 }
-.input-group{
+
+.input-group {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .button-submit {
   width: 127px;
   height: 40px;
@@ -599,16 +602,19 @@ li {
   gap: var(--SpaceExtraSmall);
   background: var(--Gray-2, #E9ECEF);
 }
-.total{
+
+.total {
   font-weight: bold;
   font-size: 30px;
 }
+
 .border-bottom {
   border-bottom: 1px solid var(--Gray-4, #ADB5BD);
   padding-bottom: 10px;
-  
+
 }
-.payment-btn{
+
+.payment-btn {
   width: 100%;
   height: 40px;
   padding: 10px 10px;
@@ -618,35 +624,42 @@ li {
   color: white;
   font-size: 20px;
 }
-.payment-btn  a{
+
+.payment-btn a {
   color: white;
 }
 
 /* حجم الخطوط للأجهزة المحمولة */
 @media (max-width: 768px) {
   .form-label {
-    font-size: 1rem; /* تغيير الحجم هنا حسب الحاجة */
+    font-size: 1rem;
+    /* تغيير الحجم هنا حسب الحاجة */
   }
 
   .btn {
-    font-size: 0.9rem; /* تغيير حجم الخط في الأزرار */
+    font-size: 0.9rem;
+    /* تغيير حجم الخط في الأزرار */
   }
 
   li {
-    font-size: 0.9rem; /* تغيير حجم الخط في العناصر */
+    font-size: 0.9rem;
+    /* تغيير حجم الخط في العناصر */
   }
 
   .total {
-    font-size: 14px; /* حجم خط مختلف للعدد الإجمالي */
+    font-size: 14px;
+    /* حجم خط مختلف للعدد الإجمالي */
 
   }
 
   .payment-btn {
-    font-size: 18px; /* تغيير حجم الخط في زر الدفع */
+    font-size: 18px;
+    /* تغيير حجم الخط في زر الدفع */
   }
 
   .button-submit {
-    font-size: 0.9rem; /* تغيير حجم الخط في زر الإرسال */
+    font-size: 0.9rem;
+    /* تغيير حجم الخط في زر الإرسال */
     width: 100%;
   }
 }
@@ -657,12 +670,15 @@ li {
   text-align: center;
   margin-top: 50px;
 }
+
 .payment-confirmation h4 {
   color: #28a745;
 }
+
 .payment-confirmation p {
   color: #6c757d;
 }
+
 .confirmation-box {
   background-color: white;
   border-radius: 10px;
