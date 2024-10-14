@@ -277,7 +277,7 @@ a {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 50px;
+    top: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -445,7 +445,7 @@ a {
 }
 
 .parent-content {
-    margin-right: 60px;
+    margin-right: 90px;
 }
 
 .step {
@@ -880,3 +880,17 @@ a {
     border-radius: 5px; /* زوايا مستديرة */
     text-align: center; /* توسيط النص */
 }
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .button-submit {
+    width: 127px;
+    height: 40px;
+    padding: 10px 10px;
+    border-radius: 8px 8px 8px 8px !important;
+    gap: var(--SpaceExtraSmall);
+    background: var(--Gray-2, #E9ECEF);
+  }
