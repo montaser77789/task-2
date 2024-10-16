@@ -1,0 +1,500 @@
+@font-face {
+    font-family: "Swissra Heavy";
+    src: url("../font/alfont_com_AlFont_com_Swissra-Heavy.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Swissra Light";
+    src: url("../font/alfont_com_AlFont_com_Swissra-Light-1.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-ligth {
+    font-family: "Swissra Light";
+    font-weight: normal;
+}
+
+.font-heavy {
+    font-family: "Swissra Light";
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Swissra Heavy", sans-serif;
+    direction: rtl;
+    border: none;
+    outline: none;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    z-index: 1000;
+
+    top: 0;
+    right: 0;
+
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar {
+    position: fixed;
+}
+
+.toggle-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    background: #1A7588;
+    color: white;
+    border-radius: 8px;
+    position: absolute;
+    left: -10px;
+}
+
+#sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link i {
+    margin: 0;
+    /* No margin for icon when collapsed */
+}
+
+#main-content {
+    flex-grow: 1;
+    transition: margin-right 0.3s ease;
+    padding-right: 111px;
+}
+
+/* .sidebar.collapsed + #main-content {
+        margin-right: 80px;
+      } */
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: fit-content;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        transition: right 0.5s ease;
+    }
+
+    .addproduct-content {
+        padding-right: 74px;
+    }
+
+    .sidebar.collapsed {
+        width: 0px;
+    }
+
+    .table-container {
+        margin-right: 100px;
+    }
+
+    .toggle-btn {
+        left: -5px;
+    }
+
+    .sidebar .nav-link i {
+        margin-right: 5px;
+    }
+
+    #main-content {
+        padding-right: 70px
+    }
+
+    .step2-btn-next {
+        width: 100% !important;
+    }
+
+
+
+    /* .sidebar.collapsed + #main-content {
+            margin-right: 60px;
+        } */
+
+    .toggle-btn {
+        font-size: 1.2rem;
+    }
+
+    #sidebar.collapsed {
+        width: 60px;
+    }
+}
+
+.fa-plus {
+    padding-left: 10px;
+}
+
+
+.nav-sidebar {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.nav-dashboard {
+
+    background: #E9ECEF;
+    padding: 10px;
+
+}
+
+.nav-item {
+    padding: 10px;
+
+}
+
+.nav-item a svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-item:hover {
+    background: #E9ECEF;
+}
+
+#toggle-btn {
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* تأثير الدوران */
+    padding: 4px 6px;
+}
+
+#toggle-btn.rotate {
+    transform: rotate(180deg);
+    /* تدوير السهم بزاوية 90 درجة */
+}
+
+#product-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-info {
+    margin-left: 10px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.profile-info img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.profile-info svg {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: -29px;
+
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-title {
+    font-weight: 600 !important;
+    font-size: 46px;
+    line-height: 50px;
+}
+
+/* /////////////////////////////////////////////// */
+.stat-value .stat-label {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+    color: var(--Gray-black, #000000);
+}
+
+.fw-bold {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: right;
+    color: var(--Gray-6, #495057);
+
+
+}
+
+.fw-bold .valible {
+    font-size: 22px;
+
+}
+
+.stat-value p {
+    font-family: Montserrat-Arabic;
+    font-size: 30px;
+    font-weight: 275;
+    line-height: 48px;
+    text-align: right;
+    color: var(--Gray-4, #ADB5BD);
+
+}
+
+.stat-value p.valible {
+    color: var(--Green-5, #22AA56);
+
+}
+
+
+.withdrawal-section {
+    background-color: #ffffff;
+}
+
+.table thead th {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table .text-success {
+    color: #28a745;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+
+.btn-pull {
+    width: 160px;
+    height: 48px;
+    padding: 14px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    opacity: 0px;
+    background: var(--Blue-6, #229CB5);
+    color: white;
+
+}
+
+.btn-settings {
+    width: 251px;
+    height: 48px;
+    padding: 14px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    border: 1px solid var(--Blue-6, #229CB5);
+    opacity: 0px;
+    background: var(--Gray-white, #FFFFFF);
+    border: 1px solid var(--Blue-6, #229CB5);
+    color: var(--Blue-6, #229CB5);
+
+}
+.form-control{
+    width: 40%;
+}
+.btn-all-transactions{
+    width: 160px;
+    height: 40px;
+    padding:  10px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px ;
+    border: 1px ;
+    opacity: 0px;
+    color: var(--Green-5, #22AA56);
+    background-color: transparent;
+    border: 1px solid var(--Green-5, #22AA56)
+
+    
+
+}
+.btn-all-transactions svg{
+    color: var(--Green-5, #22AA56);
+    width: 18px;
+    height: 18px;
+    padding-right: 10px;
+}
+.settlements{
+    color: var(--Gray-5, #6C757D);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: right;
+    
+}
+.table th,
+.table td {
+    white-space: nowrap;
+    /* Prevent text from wrapping in table cells */
+}
+.table>:not(caption)>*>* {
+    padding: 1.5rem 0.5rem !important;
+    background-color: var(--bs-table-bg) !important;
+    border-bottom-width: 0 !important;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg) !important;
+}
+tbody {
+    background-color: white !important; 
+}
+/* Custom responsive styling */
+/* Pagination styles */
+.pagination {
+    flex-wrap: wrap; /* Allow pagination items to wrap */
+    gap: 8px; /* Adjust spacing between pagination items */
+    margin-top: 10px;
+  }
+  
+  .page-item {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .page-link {
+    padding: 0.5rem 1rem; /* Adjust padding for better touch targets */
+  }
+  .page-link{
+    color: black !important;
+  }
+@media (max-width: 768px) {
+
+    .withdrawal-section,
+    .transactions-section {
+        padding: 15px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .btn-pull{
+        width: 100%;
+    }
+    .btn-settings{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        justify-content: center;
+        /* Center pagination items on smaller screens */
+        gap: 4px;
+    }
+  
+    .form-select {
+        min-width: 60px;
+        /* Set a minimum width for the dropdown */
+    }
+  
+    .page-item {
+        margin: 0 5px;
+        /* Adjust margin for smaller screens */
+    }
+  
+    .page-link {
+        font-size: 0.8rem;
+        /* Reduce font size for better fit */
+    }
+  
+    p.mb-0 {
+        font-size: 0.8rem;
+        /* Adjust font size for total pages */
+    }
+  
+    .svg-filter {
+        width: 10px;
+        height: 10px;
+    }
+    .form-control {
+      width: 100% !important;
+  }
+}  
