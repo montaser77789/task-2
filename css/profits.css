@@ -457,9 +457,11 @@ tbody {
     }
     .btn-pull{
         width: 100%;
+        font-size: 14px;
     }
     .btn-settings{
         width: 100%;
+        font-size: 14px;
     }
 }
 
