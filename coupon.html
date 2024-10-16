@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/coupon.css" />
+</head>
+
+<body dir="rtl">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-dark text-white sidebar collapsed">
+            <div class="d-flex justify-content-end p-3">
+                <button class="toggle-btn" id="toggle-btn">&larr;</button>
+            </div>
+            <div class="m-auto text-center mt-4">
+                <img class="m-auto" src="./images/Icon white.png" />
+            </div>
+            <ul class="nav-sidebar flex-column">
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fas fa-home"></i>
+                        <span>الرابط الأول</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text- text-white gap-3">
+                        <i class="fas fa-user"></i>
+                        <span>الرابط الثاني</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text- text-white gap-3">
+                        <i class="fas fa-cog"></i>
+                        <span>الرابط الثالث</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Main content -->
+        <div class="container-fluid" id="main-content">
+
+            <div class="row mb-3 align-items-center nav-dashboard">
+                <div class="col d-flex justify-content-end align-items-end">
+
+                    <div class="d-flex align-items-center">
+
+
+                        <div class="profile-info position-relative">
+                            <i class="fa-regular fa-bell" style="font-size: 24px;"></i>
+                            <span class="badge bg-danger rounded-circle position-absolute"
+                                style="top: 0; right: 0; transform: translate(50%, -50%); width: 8px; height: 8px;"></span>
+                        </div>
+
+
+
+                        <div class="profile-info">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="profile-info">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle">
+                                    <img src="./images/Rectangle 1.png" alt="Profile" class="rounded-circle" width="40">
+                                    <span class="mx-2" id="selected-user">متعب أ.</span>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-menu">
+                                    <div data-value="متعب أ.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        متعب أ.
+                                    </div>
+                                    <div data-value="محمد ب.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        محمد ب.
+                                    </div>
+                                    <div data-value="علي ج.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        علي ج.
+                                    </div>
+                                    <div data-value="فاطمة س.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        فاطمة س.
+                                    </div>
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Search and table -->
+            <div class="row table-container">
+                <div class="col">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div>
+
+                            <h1 class="mb-4 add-title">كوبونات الخصم</h1>
+                            <h6 class="mb-4 add-subtitle font-ligth">لوحة التحكم /الكوبونات / كوبونات الخصم</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap container gap-3">
+                        <input type="text" class="form-control" placeholder="بحث..." />
+                        <div class="d-flex align-items-center flex-wrap gap-3 flex-1 sm-w-100">
+                            <select class="form-select form-select-sm font-ligth ">
+                                <option selected>الكل</option>
+                                <option value="1">الكوبونات</option>
+                                <option value="2">الكوبونات</option>
+                                <option value="3">الكوبونات</option>
+                            </select>
+                            <button type="button" class=" btn-add">اضف كوبون <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="table table-hover text-center">
+                            <thead>
+                                <tr class="font-ligth">
+                                    <th class="font-ligth"><input type="checkbox" class="checkbox" /></th>
+                                    <th class="font-ligth">الكوبون<img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">رقم الكوبون<img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">استعمال <img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">القيمة <img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">صالح من <img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">إلى <img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                    <th class="font-ligth">أوامر <img class="svg-filter"
+                                            src="./images/bars-filter (1).svg" alt="Profile"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Add rows here dynamically if needed -->
+                                <tr class="text-right">
+                                    <td class="font-ligth"><input type="checkbox" class="checkbox" /></td>
+                                    <td class="font-ligth">OCB-325685362FDH</td>
+                                    <td class="font-ligth"><img src="./images/Rectangle 1.png" class="rounded-circle"
+                                            width="30"> برج مركز المملكة</td>
+                                    <td class="font-ligth">24 فبراير 2024</td>
+                                    <td class="font-ligth">5200.00 RS</td>
+                                    <td class="font-ligth">الأساسية</td>
+                                    <td class="font-ligth">شهر</td>
+                                    <td class="font-ligth">
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <button class="button-table"><i class="fa-regular fa-eye"></i></button>
+                                            <button class="button-table"><i
+                                                    class="fa-regular fa-pen-to-square"></i></button>
+                                            <button class="button-table"><i class="fa-solid fa-trash"></i></button>
+
+                                        </div>
+
+
+                                    </td>
+
+                                </tr>
+                                <tr class="text-right">
+                                    <td class="font-ligth"><input type="checkbox" class="checkbox" /></td>
+                                    <td class="font-ligth">OCB-325685362FDH</td>
+                                    <td class="font-ligth"><img src="./images/Rectangle 1.png" class="rounded-circle"
+                                            width="30"> برج مركز المملكة</td>
+                                    <td class="font-ligth">24 فبراير 2024</td>
+                                    <td class="font-ligth">5200.00 RS</td>
+                                    <td class="font-ligth">الأساسية</td>
+                                    <td class="font-ligth">شهر</td>
+                                    <td>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <button class="button-table"><i class="fa-regular fa-eye"></i></button>
+                                            <button class="button-table"><i
+                                                    class="fa-regular fa-pen-to-square"></i></button>
+                                            <button class="button-table"><i class="fa-solid fa-trash"></i></button>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <!-- Repeat for more orders -->
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!-- Pagination -->
+                    <nav>
+                        <ul class="pagination justify-content-start align-items-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <!-- Select Dropdown for Page Number -->
+                            <li class="page-item d-flex align-items-center font-ligth">
+                                <select class="form-select form-select-sm mx-2 px-5 font-ligth"
+                                    aria-label="Select page">
+                                    <option class="font-ligth" selected value="1">1</option>
+                                    <option class="font-ligth" value="2">2</option>
+                                    <option class="font-ligth" value="3">3</option>
+                                    <option class="font-ligth" value="4">4</option>
+                                    <option class="font-ligth" value="5">5</option>
+                                    <!-- يمكنك إضافة المزيد من الخيارات حسب الحاجة -->
+                                </select>
+                            </li>
+                            <li>
+                                <p class="mb-0 mx-2">/ صفحه</p>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                </div>
+            </div>
+
+
+
+
+            </dis>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <a  href="#exampleModalToggle" role="button">Open first modal</a> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="./js/coupon.js"></script>
+
+
+</body>
+
+</html>

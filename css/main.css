@@ -135,9 +135,11 @@ a {
   .sidebar .nav-link i {
     margin-right: 5px;
   }
- #main-content {
+
+  #main-content {
     padding-right: 60px
   }
+
   .step2-btn-next {
     width: 100% !important;
   }
@@ -156,7 +158,8 @@ a {
     width: 60px;
   }
 }
-.fa-plus{
+
+.fa-plus {
   padding-left: 10px;
 }
 
@@ -248,7 +251,8 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   /* لجعل ::after يعمل بشكل صحيح */
 }
-.title{
+
+.title {
   width: 19%;
 }
 
@@ -308,7 +312,8 @@ a {
   .chart {
     height: 250px;
   }
-  .title{
+
+  .title {
     width: 100%;
   }
 }
@@ -376,7 +381,7 @@ a {
   align-items: center;
 }
 
-.stat-icon{
+.stat-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -389,20 +394,25 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .stat-value p {
   font-size: 30px;
 }
-.stat-info{
+
+.stat-info {
   display: flex;
   justify-content: end;
   /* align-items: center; */
   gap: 10px;
   margin-top: auto;
 }
-.stat-info span , .stat-info p{
+
+.stat-info span,
+.stat-info p {
   font-size: 12px;
 }
-.stat-info p{
+
+.stat-info p {
   color: var(--Green-Main, #2BD46B);
   margin-bottom: 0 !important;
 }
@@ -443,33 +453,34 @@ a {
 
   .table th,
   .table td {
-      font-size: 0.8rem;
-      /* Adjust font size for smaller screens */
+    font-size: 0.8rem;
+    /* Adjust font size for smaller screens */
   }
 
 
 
   .table .btn {
-      font-size: 0.8rem;
-      /* Adjust button font size for smaller screens */
+    font-size: 0.8rem;
+    /* Adjust button font size for smaller screens */
   }
 
   .table-responsive {
-      max-height: none;
-      overflow-y: auto;
-      overflow-x: auto;
-      max-width: 314px;
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-width: 314px;
 
 
   }
 
   .table {
-      width: 100%;
+    width: 100%;
 
   }
 
 
 }
+
 .table>:not(caption)>*>* {
   padding: 1.5rem 0.5rem !important;
   background-color: var(--bs-table-bg) !important;
@@ -500,61 +511,69 @@ a {
 
 @media (max-width: 768px) {
   .pagination {
-      justify-content: center;
-      /* Center pagination items on smaller screens */
-      gap: 4px;
+    justify-content: center;
+    /* Center pagination items on smaller screens */
+    gap: 4px;
   }
 
   .form-select {
-      min-width: 60px;
-      /* Set a minimum width for the dropdown */
+    min-width: 60px;
+    /* Set a minimum width for the dropdown */
   }
 
   .page-item {
-      margin: 0 5px;
-      /* Adjust margin for smaller screens */
+    margin: 0 5px;
+    /* Adjust margin for smaller screens */
   }
 
   .page-link {
-      font-size: 0.8rem;
-      /* Reduce font size for better fit */
+    font-size: 0.8rem;
+    /* Reduce font size for better fit */
   }
 
   p.mb-0 {
-      font-size: 0.8rem;
-      /* Adjust font size for total pages */
+    font-size: 0.8rem;
+    /* Adjust font size for total pages */
   }
 
   .svg-filter {
-      width: 10px;
-      height: 10px;
+    width: 10px;
+    height: 10px;
   }
+
   .form-control {
     width: 100% !important;
-}
+  }
 
 }
-.table th, .table td {
+
+.table th,
+.table td {
   white-space: nowrap;
   font-family: initial;
 }
 
-.page-link{
+.page-link {
   color: black !important;
 }
+
 /* Pagination styles */
 .pagination {
-  flex-wrap: wrap; /* Allow pagination items to wrap */
-  gap: 8px; /* Adjust spacing between pagination items */
+  flex-wrap: wrap;
+  /* Allow pagination items to wrap */
+  gap: 8px;
+  /* Adjust spacing between pagination items */
   margin-top: 10px;
 }
 
 .page-item {
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  /* Remove default margin */
 }
 
 .page-link {
-  padding: 0.5rem 1rem; /* Adjust padding for better touch targets */
+  padding: 0.5rem 1rem;
+  /* Adjust padding for better touch targets */
 }
 
 /* .table-container {
@@ -565,26 +584,32 @@ a {
   font-size: 46px;
   line-height: 50px;
 }
+
 .step2-btn-next {
 
-  width:  154px;
-  height:  40px;
-  padding:  10px;
-  border-radius: 8px ;
+  width: 154px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
   border: 1px x;
   opacity: 0px;
   background: var(--Gray-white, #FFFFFF);
-  border: 1px solid var(--Blue-6, #229CB5)  ;
+  border: 1px solid var(--Blue-6, #229CB5);
   color: var(--Blue-6, #229CB5);
 
 }
-.dropdown-menu{
-left: 10px;
+
+.dropdown-menu {
+  left: 10px;
 }
+
 .d-flex.flex-1 {
-  flex-grow: 1; /* تجعل العنصر يأخذ المساحة المتبقية */
-  min-width: 0; /* تمنع العنصر من تجاوز حدود الحاوية */
+  flex-grow: 1;
+  /* تجعل العنصر يأخذ المساحة المتبقية */
+  min-width: 0;
+  /* تمنع العنصر من تجاوز حدود الحاوية */
 }
+
 .form-control {
   border-radius: 8px;
   border: 1px solid #CED4DA;
@@ -593,8 +618,12 @@ left: 10px;
 
 
 }
-@media (max-width: 768px) { /* الشاشات التي عرضها أقل من 768px (الموبايل) */
+
+@media (max-width: 768px) {
+
+  /* الشاشات التي عرضها أقل من 768px (الموبايل) */
   .custom-mobile-gap {
-      gap: 15px; /* تعيين فجوة بين الأعمدة */
+    gap: 15px;
+    /* تعيين فجوة بين الأعمدة */
   }
 }
