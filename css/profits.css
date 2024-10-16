@@ -462,6 +462,16 @@ tbody {
     .btn-settings{
         width: 100%;
         font-size: 14px;
+        text-wrap: nowrap;
+    }
+    .btn-all-transactions{
+        text-wrap: nowrap;
+        
+    }
+    .btn-all-transactions svg{
+        width: 14px;
+        height: 14px;
+
     }
 }
 
