@@ -356,6 +356,10 @@ text-align: right;
     color: white;
 }
 
+/* تنسيق العنصر النشط (active) */
+.nav-item.active {
+    background-color: var(--Blue-6, #229CB5);
+}
 
 /* /////////////////////////////////////////////// */
 .stat-value .stat-label {

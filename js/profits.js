@@ -86,3 +86,20 @@ document.querySelectorAll('.toggle-submenu').forEach(function (element) {
     });
 });
 
+
+// استهداف جميع الروابط في الشريط الجانبي
+const navLinks = document.querySelectorAll('.nav-item ');
+
+// إضافة حدث النقر لكل رابط
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        console.log('clicked');
+        
+        // إزالة فئة 'active' من جميع الروابط
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // إضافة فئة 'active' للرابط الذي تم النقر عليه
+        this.classList.add('active');
+    });
+});
+
