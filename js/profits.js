@@ -34,3 +34,55 @@ window.onclick = function (event) {
         }
     }
 }
+
+
+// Get elements
+const notificationBell = document.getElementById('notification-bell'); // Ensure ID matches HTML
+const notificationDropdown = document.getElementById('notification-dropdown');
+const messageIcon = document.getElementById('message-icon'); // Ensure ID matches HTML
+const messageDropdown = document.getElementById('message-dropdown');
+
+// Toggle visibility of dropdown when clicking the bell icon
+notificationBell.addEventListener('click', function () {
+    console.log('clicked');
+    
+    notificationDropdown.style.display = notificationDropdown.style.display === 'block' ? 'none' : 'block';
+    console.log(notificationDropdown.style.display);
+    messageDropdown.style.display = 'none';
+
+    console.log(messageDropdown.style.display);
+    
+    
+});
+
+// Toggle visibility of dropdown when clicking the message icon
+messageIcon.addEventListener('click', function () {
+    console.log('clicked');
+    
+    messageDropdown.style.display = messageDropdown.style.display === 'block' ? 'none' : 'block';
+    notificationDropdown.style.display = 'none';
+    console.log(notificationDropdown.style.display);
+    
+
+    console.log(messageDropdown.style.display);
+
+});
+
+// Hide dropdown when clicking outside of the icons
+window.addEventListener('click', function (e) {
+    if (!e.target.matches('.fa-bell') && !e.target.matches('.fa-envelope')) {
+        notificationDropdown.style.display = 'none';
+        messageDropdown.style.display = 'none';
+    }
+});
+
+document.querySelectorAll('.toggle-submenu').forEach(function (element) {
+    element.addEventListener('click', function (event) {
+        event.preventDefault(); // منع الرابط من إعادة التحميل
+        const subMenu = this.nextElementSibling; // القائمة الفرعية التالية
+        subMenu.classList.toggle('open'); // إضافة أو إزالة كلاس "open"
+        const arrowIcon = this.querySelector('.arrow-icon'); // السهم
+        arrowIcon.classList.toggle('open'); // دوران السهم
+    });
+});
+

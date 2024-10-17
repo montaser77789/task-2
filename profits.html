@@ -41,19 +41,27 @@
                         <span>الطلبات</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text- text-white gap-3">
+                <li class="nav-item-selected">
+                    <a href="#" class="nav-link text-white gap-3 toggle-submenu">
                         <i class="fa-solid fa-gift"></i>
-                        <select class="form-select form-select-sm " aria-label="Select page">
-                            <option class="font-ligth" selected value="1">كوبونات الخصم</option>
-                            <option class="font-ligth" value="2">2</option>
-                            <option class="font-ligth"  value="3">3</option>
-                            <option  class="font-ligth" value="4">4</option>
-                            <option  class="font-ligth" value="5">5</option>
-                            <!-- يمكنك إضافة المزيد من الخيارات حسب الحاجة -->
-                        </select>
+                        <span>كوبونات الخصم</span>
+                        <i class="fa fa-chevron-down arrow-icon"></i>
                     </a>
+                    <ul class="sub-menu bg-dark">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text- text-white gap-3">
+                                <span>الكوبونات</span>
+                            </a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text- text-white gap-3">
+                                <span>الكوبونات2</span>
+                            </a>
+                        </li>  
+
+                    </ul>
                 </li>
+                
                 <li class="nav-item">
                     <a href="#" class="nav-link text- text-white gap-3">
                         <span class="settings">الاعدات</span>
@@ -81,21 +89,32 @@
 
             <div class="row mb-3 align-items-center nav-dashboard">
                 <div class="col d-flex justify-content-end align-items-end">
-
                     <div class="d-flex align-items-center">
-
-
+                        <!-- Notification Bell -->
                         <div class="profile-info position-relative">
-                            <i class="fa-regular fa-bell" style="font-size: 24px;"></i>
+                            <button id="notification-bell"><i class="fa-regular fa-bell"></i></button>
                             <span class="badge bg-danger rounded-circle position-absolute"
-                                style="top: 0; right: 0; transform: translate(50%, -50%); width: 8px; height: 8px;"></span>
+                                  style="top: 0; right: 0; transform: translate(50%, -50%); width: 8px; height: 8px;"></span>
+                            <!-- Notification Dropdown -->
+                            <div class="dropdown-content-notification" id="notification-dropdown">
+                                <div>إشعار 1</div>
+                                <div>إشعار 2</div>
+                                <div>إشعار 3</div>
+                            </div>
                         </div>
-
-
-
-                        <div class="profile-info">
-                            <i class="fa-regular fa-envelope"></i>
+            
+                        <!-- Messages -->
+                        <div class="profile-info position-relative">
+                            <button id="message-icon"><i class="fa-regular fa-envelope"></i></button>
+                            <!-- Message Dropdown -->
+                            <div class="dropdown-content-message" id="message-dropdown">
+                                <div>رسالة 1</div>
+                                <div>رسالة 2</div>
+                                <div>رسالة 3</div>
+                            </div>
                         </div>
+            
+                        <!-- Profile Dropdown -->
                         <div class="profile-info">
                             <div class="custom-dropdown">
                                 <div class="dropdown-toggle">
@@ -119,15 +138,15 @@
                                         <img src="./images/Rectangle 1.png" alt="Profile">
                                         فاطمة س.
                                     </div>
-                                    <!-- Add more options as needed -->
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
+            
+            
+
 
             <div class="container">
                 <div>
@@ -292,6 +311,7 @@
 
 
         </div>
+
     </div>
 
 
