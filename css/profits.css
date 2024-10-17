@@ -386,10 +386,9 @@ a {
     border-radius: 8px;
     border: 1px;
     opacity: 0px;
-    color: var(--Green-5, #22AA56);
+    background: var(--Gray-white, #FFFFFF);
     background-color: transparent;
-    border: 1px solid var(--Green-5, #22AA56)
-}
+    border: 1px solid var(--Gray-3, #CED4DA)}
 
 .btn-all-transactions svg {
     color: var(--Green-5, #22AA56);
@@ -526,4 +525,10 @@ tbody {
     .form-control {
         width: 100% !important;
     }
+}
+.parent-card-1 {
+    border-bottom: 1px solid var(--Gray-4, #22AA56);
+}
+.parent-card{
+    border-bottom: 1px solid var(--Gray-4, #ADB5BD);
 }

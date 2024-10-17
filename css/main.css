@@ -492,15 +492,19 @@ a {
 
 
 .ptn-active {
-  width: 93px;
-
-  gap: 0px;
-  border-radius: 13.5px;
+  width:  118px;
+  height:  40px;
+  padding:  10px;
+  gap: var(--SpaceExtraSmall);
+  border-radius: 8px;
+  border: 1px ;
   opacity: 0px;
-  background: #BFF2D3;
-  color: #22AA56;
-  padding: 3px 20px;
-  border: none;
+  color: var(--Gray-white, #FFFFFF);
+  border: 1px solid var(--Gray-3, #CED4DA);
+  color: black;
+  font-weight: bold;
+
+  
 }
 
 .svg-filter {

@@ -111,13 +111,13 @@
             <div class=" mt-4 container ">
                 <div class="row custom-mobile-gap">
 
-                    <div class="col-md-3 col-sm-12 parent-card">
+                    <div class="col-md-3 col-sm-12 parent-card-1 ">
                         <div class="stat-card">
                             <div class="d-flex  text-right gap-3 align-items-center">
 
                                 <div class="stat-value">
                                     <div class="stat-label">المبلغ الاجمالي</div>
-                                    <p>0.00 RSA</p>
+                                    <p  class="valible">0.00 RSA</p>
                                 </div>
 
                             </div>
@@ -165,7 +165,7 @@
 
                                 <div class="stat-value">
                                     <div class="stat-label">متاح للسحب</div>
-                                    <p class="valible"> 0.00 <span>RSA</span></p>
+                                    <p> 0.00 <span>RSA</span></p>
                                 </div>
 
                             </div>
@@ -180,51 +180,43 @@
             </div>
 
             <div class="container my-5">
-                <!-- Withdrawal Section -->
-                <div class="withdrawal-section border p-4 rounded ">
-                    <h5 class="fw-bold">المبلغ المتاح للسحب: <span class="valible">1000 ريال سعودي</span></h5>
-                    <p>يتم إرسال الرصيد بشكل أوتوماتيكي بداية كل شهر إلى الحساب المحدد من العميل</p>
-                    <form class="my-4">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="ادخل مبلغ السحب">
-                        </div>
-                        <div class="d-flex gap-3 align-items-center flex-wrap">
-                            <button type="button" class="btn-pull">سحب الآن</button>
-                            <button type="button" class="btn-settings">إعدادات السحب و الحسابات البنكية</button>
-                        </div>
-                    </form>
-                </div>
+             
 
                 <!-- Transactions Table -->
                 <div class="transactions-section my-5">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h6 class="font-heavy settlements">التسويات آخر 30 يوم</h6>
-                        <button class="btn-all-transactions">كل العمليات <i
-                                class="fa-solid fa-chevron-left"></i></button>
+                        <input type="text" class="form-control" placeholder="بحث">
+                        <select class="btn-all-transactions">
+                            <option value="">كل العمليات</option>
+                            <option value="">سحب أموال</option>
+                            <option value="">اضافة أموال</option>
+                            <!-- Add more options as needed -->
+
+                        </select>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped mt-3 text-center">
                             <thead class="table-light">
                                 <tr>
-                                    <th>ID</th>
-                                    <th>صافي</th>
-                                    <th>الرسوم</th>
-                                    <th>إجمالي</th>
-                                    <th>العميل</th>
-                                    <th>النوع</th>
                                     <th>تاريخ العملية</th>
+                                    <th>النوع</th>
+                                    <th>العميل</th>
+                                    <th>إجمالي</th>
+                                    <th>الرسوم</th>
+                                    <th>صافي</th>
+                                    <th>ID</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- Row Example -->
                                 <tr>
-                                    <td>782256489</td>
-                                    <td>2400 RSA</td>
-                                    <td>100 RSA</td>
-                                    <td>2500 RSA</td>
-                                    <td>منصة رؤوف</td>
-                                    <td>سحب أموال</td>
-                                    <td class="text-success">12 FEB 2024</td>
+                                    <td>12 FEB 2024</td>
+                                    <td>سحب أموال </td>
+                                    <td> محمد </td>
+                                    <td>1000</td>
+                                    <td>0</td>
+                                    <td>1000</td>
+                                    <td class="text-success">OCB-325685362FDH</td>
                                 </tr>
                                 <!-- Repeat similar rows -->
                             </tbody>
@@ -233,7 +225,7 @@
                 </div>
             </div>
 
-            <nav>
+            <nav class="container">
                 <ul class="pagination justify-content-start align-items-center">
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
