@@ -59,6 +59,15 @@ a {
 .sidebar.collapsed .nav-item-selected  .arrow-icon {
     display: none;
 }
+.arrow-icon {
+    transition: transform 0.3s ease; /* الانتقال السلس */
+    
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg); /* دوران 180 درجة */
+}
+
 .sidebar {
     position: fixed;
 }

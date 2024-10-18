@@ -81,8 +81,9 @@ document.querySelectorAll('.toggle-submenu').forEach(function (element) {
         event.preventDefault(); // منع الرابط من إعادة التحميل
         const subMenu = this.nextElementSibling; // القائمة الفرعية التالية
         subMenu.classList.toggle('open'); // إضافة أو إزالة كلاس "open"
+        
         const arrowIcon = this.querySelector('.arrow-icon'); // السهم
-        arrowIcon.classList.toggle('open'); // دوران السهم
+        arrowIcon.classList.toggle('rotate'); // دوران السهم
     });
 });
 
