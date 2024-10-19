@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/sidepar-navbar.css" />
+    <link rel="stylesheet" href="css/invoices.css" />
+</head>
+
+<body dir="rtl">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-dark text-white sidebar collapsed">
+            <div class="d-flex justify-content-end p-3">
+                <button class="toggle-btn" id="toggle-btn">&larr;</button>
+            </div>
+
+            <ul class="nav-sidebar flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <img class="" src="./images/Icon white.png" />
+                        <span>رفوف</span>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fas fa-home"></i>
+                        <span>الرئسيه</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fas fa-user"></i>
+                        <span>الطلبات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item-selected">
+                    <a href="#" class="nav-link text-white gap-3 toggle-submenu">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>كوبونات الخصم</span>
+                        <i class="fa fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="sub-menu bg-dark">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white gap-3">
+                                <span>الكوبونات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white gap-3">
+                                <span>الكوبونات2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <span class="settings">الاعدات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>الاعدات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fa-solid fa-question"></i>
+                        <span>مركز المساعده</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- Main content -->
+        <div class="container-fluid" id="main-content">
+
+            <div class="row mb-3 align-items-center nav-dashboard">
+                <div class="col d-flex justify-content-end align-items-end">
+                    <div class="d-flex align-items-center">
+                        <!-- Notification Bell -->
+                        <div id="notification-bell" class="profile-info position-relative">
+                            <button><i class="fa-regular fa-bell"></i></button>
+                            <span class="badge bg-danger rounded-circle position-absolute"
+                                style="top: 0; right: 0; transform: translate(50%, -50%); width: 8px; height: 8px;"></span>
+                            <!-- Notification Dropdown -->
+                            <div class="dropdown-content-notification" id="notification-dropdown">
+                                <div>إشعار 1</div>
+                                <div>إشعار 2</div>
+                                <div>إشعار 3</div>
+                            </div>
+                        </div>
+
+                        <!-- Messages -->
+                        <div id="message-icon" class="profile-info position-relative">
+                            <button><i class="fa-regular fa-envelope"></i></button>
+                            <!-- Message Dropdown -->
+                            <div class="dropdown-content-message" id="message-dropdown">
+                                <div>رسالة 1</div>
+                                <div>رسالة 2</div>
+                                <div>رسالة 3</div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Dropdown -->
+                        <div class="profile-info">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle">
+                                    <img src="./images/Rectangle 1.png" alt="Profile" class="rounded-circle" width="40">
+                                    <span class="mx-2" id="selected-user">متعب أ.</span>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-menu">
+                                    <div data-value="متعب أ.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        متعب أ.
+                                    </div>
+                                    <div data-value="محمد ب.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        محمد ب.
+                                    </div>
+                                    <div data-value="علي ج.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        علي ج.
+                                    </div>
+                                    <div data-value="فاطمة س.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        فاطمة س.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="container">
+                <div>
+                    <h1 class="mb-4 add-title">فاتوره </h1>
+                    <h6 class="mb-4 add-subtitle font-ligth">لوحة التحكم /الطلبات / فاتوره </h6>
+                </div>
+
+            </div>
+
+            <div class="container ">
+                <div class="row mb-4">
+                    <button class="invoice-btn">الباقه المميزه</button>
+
+                </div>
+
+                <div class="row mb-4   ">
+                    <div class="col-md-4 invoice-profile ">
+                        <p>فاتورة من: </p>
+                        <strong>علامة تجارية</strong>
+                        <p>34 شارع الإمام سعود بن فيصل, الرياض</p>
+                    </div>
+                    <div class="col-md-4 invoice-profile">
+                        <p>فاتورة إلى: </p>
+                        <strong>برج مركز المملكة</strong>
+                        <p>34 شارع الإمام سعود بن فيصل, الرياض</p>
+                    </div>
+
+                    <div class="col-md-4 invoice-profile">
+                        <p>حدثت بتاريخ: <span>24 فبراير 2024</span></p>
+                        <p>تنتهي في: <span>24 مايو 2024</span></p>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col-md-6">
+                        <div class="summary">
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2">
+                                <h5>حجز:</h5>
+                                <h5>3 شهور</h5>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2">
+                                <h5>المدة :</h5>
+                                <h5>3 شهور</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2">
+                                <h5>السعر:</h5>
+                                <h5>500 RS</h5>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2 border-bottom">
+                                <h5>كوبون التخفيض:</h5>
+                                <h5>8RSF568</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2">
+                                <h5>الإجمالي:</h5>
+                                <h5>450 RS</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2 border-bottom">
+                                <h5>عمولة الخدمة (10%):</h5>
+                                <h5>45 RS</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center w-50 mb-2">
+                                <h5 class="total-amount">صافي الدفع:</h5>
+                                <h5 class="total-amount">495 RS</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="d-flex justify-content-between align-items-center flex-row">
+                                            <span>كود</span> 
+                                            
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex justify-content-between align-items-center flex-row">
+                                            <span>المنتج</span>
+                                            <img class="svg-filter" src="./images/bars-filter (1).svg" alt="Filter">
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex justify-content-between align-items-center flex-row">
+                                            <span>الكمية</span>
+                                            <img class="svg-filter" src="./images/bars-filter (1).svg" alt="Filter">
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="./images/Rectangle 1.png " alt="Product Image"> شامبو الشعر</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="./images/Rectangle 1.png " alt="Product Image"> شامبو الشعر</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><img src="./images/Rectangle 1.png " alt="Product Image"> شامبو الشعر</td>
+                                    <td>17</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><img src="./images/Rectangle 1.png " alt="Product Image"> شامبو الشعر</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn-print"><i class="fa-solid fa-print"></i></button>
+                    <button class="btn-share">مشاركة <i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <a  href="#exampleModalToggle" role="button">Open first modal</a> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="./js/sidepar-navbar.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+    background: var(--Gray-2, #E9ECEF);
+}
+
+.container-profile {
+    background: var(--Gray-white, #FFFFFF);
+    border-radius: 12px;
+    padding: 24px;
+
+}
+
+.form-label {
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: left;
+    color: var(--Gray-7, #212529);
+
+}
+
+.name-profile {
+    min-width: 48%;
+    flex: 1;
+}
+
+.submit-btn {
+    width:  160px;
+    height:  40px;
+    padding: 10px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px  ;
+    opacity: 0px;
+    background: var(--Blue-6, #229CB5);
+color: white;
+
+}
+
+@media screen and (max-width: 768px) {
+    .submit-btn{
+        width: 100%;
+    }
+  
+}

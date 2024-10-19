@@ -1,0 +1,118 @@
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table tbody img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+.summary h5 {
+    font-weight: bold;
+}
+
+.summary p {
+    margin: 0;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+.invoice-btn {
+    width: 258px;
+    height: 56px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: var(--Gray-7, #212529);
+
+    color: var(--Gray-white, #FFFFFF);
+    font-size: 18px;
+    text-align: right;
+
+}
+
+.invoice-profile p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 550;
+
+}
+
+.invoice-profile span {
+    font-size: 18px;
+
+
+}
+
+.invoice-profile strong {
+    font-size: 23px;
+    font-weight: 650;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0px;
+}
+
+.btn-print {
+    width: 48px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px;
+    background: var(--Gray-white, #FFFFFF);
+    border: 1px solid var(--Gray-3, #CED4DA)
+}
+
+.btn-share {
+    width:  160px;
+    height:  48p;
+    padding:  14px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px ;
+    opacity: 0px;
+    background: var(--Blue-6, #229CB5);
+    color: white;
+
+}
+.btn-share svg {
+    padding-right: 20px !important;
+}
+.svg-filter {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {}
+
+@media screen and (max-width: 768px) {
+    .summary {
+        width: 100%;
+    }
+    .w-50{
+        width: 100% !important;
+    }
+    .invoice-profile{
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+}
+

@@ -1,0 +1,95 @@
+.form-label {
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: left;
+    color: var(--Gray-7, #212529);
+
+}
+
+.name-profile {
+    min-width: 48%;
+    flex: 1;
+}
+
+.select {
+    width: 596px;
+    height: 40px;
+    padding: 0 12px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    border: 1px;
+    background: var(--Gray-white, #FFFFFF);
+    border: 1px solid var(--Gray-3, #CED4DA)
+}
+
+.form {
+    width: 50%;
+}
+
+.input-group-price {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.form-control-price {
+    flex: 1;
+    height: 64px;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+.currency {
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add-btn {
+    color: var(--Gray-white, #FFFFFF);
+    width: Fixed (160px)px;
+    height: Fixed (48px)px;
+    padding: 14px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    background: var(--Blue-6, #229CB5);
+
+}
+
+.cancel-btn {
+    width: Fixed (160px)px;
+    height: Fixed (48px)px;
+    padding: 0px 14px 0px 14px;
+    gap: var(--SpaceExtraSmall);
+    border-radius: 8px;
+    border: 1px ;
+    opacity: 0px;
+    background: var(--Gray-white, #FFFFFF);
+    color: var(--Danger-Click, #FF6157);
+    border: 1px solid var(--Gray-3, #CED4DA)
+}
+.add-btn svg {
+    padding-right: 30px !important;
+}
+
+.cancel-btn svg {
+    padding-left: 30px !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+
+}

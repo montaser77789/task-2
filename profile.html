@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/sidepar-navbar.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+
+
+</head>
+
+<body dir="rtl">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-dark text-white sidebar collapsed">
+            <div class="d-flex justify-content-end p-3">
+                <button class="toggle-btn" id="toggle-btn">&larr;</button>
+            </div>
+            
+            <ul class="nav-sidebar flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <img class="" src="./images/Icon white.png" />
+                        <span>رفوف</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item active">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fas fa-home"></i>
+                        <span>الرئسيه</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fas fa-user"></i>
+                        <span>الطلبات</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item-selected">
+                    <a href="#" class="nav-link text-white gap-3 toggle-submenu">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>كوبونات الخصم</span>
+                        <i class="fa fa-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="sub-menu bg-dark">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white gap-3">
+                                <span>الكوبونات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white gap-3">
+                                <span>الكوبونات2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <span class="settings">الاعدات</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>الاعدات</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white gap-3">
+                        <i class="fa-solid fa-question"></i>
+                        <span>مركز المساعده</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+
+
+        <!-- Main content -->
+        <div class="container-fluid" id="main-content">
+
+            <div class="row mb-3 align-items-center nav-dashboard">
+                <div class="col d-flex justify-content-end align-items-end">
+                    <div class="d-flex align-items-center">
+                        <!-- Notification Bell -->
+                        <div id="notification-bell" class="profile-info position-relative">
+                            <button ><i class="fa-regular fa-bell"></i></button>
+                            <span class="badge bg-danger rounded-circle position-absolute"
+                                  style="top: 0; right: 0; transform: translate(50%, -50%); width: 8px; height: 8px;"></span>
+                            <!-- Notification Dropdown -->
+                            <div class="dropdown-content-notification" id="notification-dropdown">
+                                <div>إشعار 1</div>
+                                <div>إشعار 2</div>
+                                <div>إشعار 3</div>
+                            </div>
+                        </div>
+            
+                        <!-- Messages -->
+                        <div id="message-icon" class="profile-info position-relative">
+                            <button ><i class="fa-regular fa-envelope"></i></button>
+                            <!-- Message Dropdown -->
+                            <div class="dropdown-content-message" id="message-dropdown">
+                                <div>رسالة 1</div>
+                                <div>رسالة 2</div>
+                                <div>رسالة 3</div>
+                            </div>
+                        </div>
+            
+                        <!-- Profile Dropdown -->
+                        <div class="profile-info">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle">
+                                    <img src="./images/Rectangle 1.png" alt="Profile" class="rounded-circle" width="40">
+                                    <span class="mx-2" id="selected-user">متعب أ.</span>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-menu">
+                                    <div data-value="متعب أ.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        متعب أ.
+                                    </div>
+                                    <div data-value="محمد ب.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        محمد ب.
+                                    </div>
+                                    <div data-value="علي ج.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        علي ج.
+                                    </div>
+                                    <div data-value="فاطمة س.">
+                                        <img src="./images/Rectangle 1.png" alt="Profile">
+                                        فاطمة س.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+            <div class="container">
+                <div>
+                    <h1 class="mb-4 add-title">الملف الشخصي </h1>
+                    <h6 class="mb-4 add-subtitle font-ligth">لوحة التحكم /الملف الشخصي </h6>
+                </div>
+
+            </div>
+            <div class="container container-profile">
+                <div>
+                    <div class="d-flex align-items-center gap-3 flex-wrap align-items-center profile" >
+                        <img src="./images/Rectangle 1.png" alt="Profile" class="rounded-circle" width="100">
+                        <div>
+                            <h2>برج المملكة السعودية</h2>
+                            <p>الرياض</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="mt-5">
+                    <form>
+                        <div class="d-flex flex-wrap w-100 gap-3">
+                            <div class="name-profile">
+                                <label for="firstName" class="form-label">اسم المحل</label>
+                                <input type="text" class="form-control" id="firstName" value="هنا نص كتابه">
+                            </div>
+                             <div class="name-profile">
+                                <label for="phoneNumber" class="form-label">مجال العمل</label>
+                                <input type="text" class="form-control" id="phoneNumber" value="هنا نص كتابه">
+                             </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="address" class="form-label">العنوان</label>
+                            <input type="text" class="form-control" id="address" value="هنا نص كتابه">
+
+                        </div>
+                        <div class="mt-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">وصف المحل بالعربي</label>
+                            <!-- <t type="text" class="form-control" id="address" value="هنا نص كتابه"> -->
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">هنا نص كتابه</textarea>
+
+                        </div>
+                        <div class="d-flex flex-wrap w-100 gap-3 mt-3">
+                            <div class="name-profile">
+                                <label for="email" class="form-label">البريد الالكتروني</label>
+                                <input type="text" class="form-control" id="email" value="هنا نص كتابه">
+                            </div>
+                             <div class="name-profile">
+                                <label for="phoneNumber" class="form-label">رقم الهاتف</label>
+                                <input type="text" class="form-control" id="phoneNumber" value="هنا نص كتابه">
+                             </div>
+                        </div>
+                        <div class="mt-3 d-flex justify-content-end">
+                            <button type="submit" class="submit-btn ">تاكيد</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                
+
+
+
+
+            </div>
+
+            <div class="container container-profile mt-5"> 
+                <div>
+                    <div class="d-flex align-items-center gap-3 flex-wrap" >
+                        <div>
+                            <h2>كلمة السر</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-5">
+                    <form>
+                        <div class="d-flex flex-wrap w-100 gap-3">
+                            <div class="name-profile">
+                                <label for="firstName" class="form-label">كلمة السر الحالية</label>
+                                <input type="text" class="form-control" id="firstName" value="هنا نص كتابه">
+                            </div>
+                             <div class="name-profile">
+                                <label for="phoneNumber" class="form-label">كلمة السر الجديدة</label>
+                                <input type="text" class="form-control" id="phoneNumber" value="هنا نص كتابه">
+                             </div>
+                        </div>
+                    
+                       
+                        <div class="d-flex flex-wrap justify-content-center align-items-center w-100 gap-3 mt-3">
+                            <div class="name-profile">
+                                <label for="email" class="form-label">تأكيد كلمة السر</label>
+                                <input type="text" class="form-control" id="email" value="هنا نص كتابه">
+                            </div>
+                             <div class="d-flex justify-content-center name-profile mt-4">
+                                <button type="submit " class="submit-btn ">تاكيد</button>
+                             </div>
+                        </div>
+                     
+                    </form>
+                </div>
+            </div>
+
+            
+
+         
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <a  href="#exampleModalToggle" role="button">Open first modal</a> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="./js/sidepar-navbar.js"></script>
+
+
+</body>
+
+</html>
