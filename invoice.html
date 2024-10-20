@@ -324,23 +324,30 @@
         <script>
             document.getElementById('print-btn').addEventListener('click', function () {
                 const element = document.getElementById('content-to-print');
+                const buttonsDiv = document.querySelector('.btn-print').parentElement; 
         
-                // Adjusting html2pdf to start printing from the top of the page
+                buttonsDiv.style.visibility = 'hidden';
+        
                 html2pdf()
                     .from(element)
                     .set({
-                        margin: [0, 1, 1, 1], // Set top margin to 0, and keep other margins as 1 inch
+                        margin: [0, 1, 1, 1], 
                         filename: 'document.pdf',
                         image: { type: 'jpeg', quality: 0.98 },
-                        html2canvas: { scale: 2, scrollY: 0 }, // Ensure full page is captured without scrolling
+                        html2canvas: { scale: 2, scrollY: 0 }, 
                         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
                     })
                     .save()
+                    .then(() => {
+                        buttonsDiv.style.visibility = 'visible';
+                    })
                     .catch(error => {
                         console.error('Error generating PDF:', error);
+                        buttonsDiv.style.visibility = 'visible';
                     });
             });
         </script>
+        
         
         
 
