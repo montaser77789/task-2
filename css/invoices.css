@@ -115,4 +115,20 @@
     }
     
 }
+.invoice-btn:hover,
+.btn-share:hover {
+    opacity: 0.8;
+}
+
+.invoice-btn:focus,
+.btn-share:focus {
+    outline: 2px solid #229CB5; /* Example focus outline */
+}
+.invoice-btn {
+    opacity: 1; /* Set to 1 to make it visible */
+}
+
+.btn-share {
+    height: 48px; /* Corrected from 48p to 48px */
+}
 
