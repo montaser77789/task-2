@@ -352,10 +352,12 @@
                 const buttonsDiv = document.querySelector('.btn-print').parentElement; 
                 const addsubtitle = document.querySelector('.add-subtitle');
                 const invoicebtncontainer = document.querySelector('.invoice-btn-container');
+                const footer = document.querySelector('.footer');
         
                 buttonsDiv.style.display = 'none';
                 addsubtitle.style.display = 'none';
                 invoicebtncontainer.style.display = 'none';
+                footer.style.display = 'none';
                 
         
                 html2pdf()
@@ -372,6 +374,7 @@
                         buttonsDiv.style.display = 'block';
                         addsubtitle.style.display = 'block';
                         invoicebtncontainer.style.display = 'block';
+                        footer.style.display = 'block';
 
                     })
                     .catch(error => {
@@ -379,6 +382,7 @@
                         buttonsDiv.style.display = 'block';
                         addsubtitle.style.display = 'block';
                         invoicebtncontainer.style.display = 'block';
+                        footer.style.display = 'block';
 
                     });
             });
