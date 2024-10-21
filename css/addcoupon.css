@@ -91,5 +91,8 @@
     .form {
         width: 100%;
     }
+    .img-none{
+        display: none;
+    }
 
 }
