@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="container ">
-                    <div class="row mb-4">
+                    <div class="row mb-4 invoice-btn-container" >
                         <button class="invoice-btn">الباقه المميزه</button>
 
                     </div>
@@ -345,9 +345,11 @@
                 const element = document.getElementById('content-to-print');
                 const buttonsDiv = document.querySelector('.btn-print').parentElement; 
                 const addsubtitle = document.querySelector('.add-subtitle');
+                const invoicebtncontainer = document.querySelector('.invoice-btn-container');
         
-                buttonsDiv.style.visibility = 'hidden';
-                addsubtitle.style.visibility = 'hidden';
+                buttonsDiv.style.display = 'none';
+                addsubtitle.style.display = 'none';
+                invoicebtncontainer.style.display = 'none';
                 
         
                 html2pdf()
@@ -361,13 +363,22 @@
                     })
                     .save()
                     .then(() => {
-                        buttonsDiv.style.visibility = 'visible';
+                        buttonsDiv.style.display = 'block';
+                        addsubtitle.style.display = 'block';
+                        invoicebtncontainer.style.display = 'block';
+
                     })
                     .catch(error => {
                         console.error('Error generating PDF:', error);
-                        buttonsDiv.style.visibility = 'visible';
+                        buttonsDiv.style.display = 'block';
+                        addsubtitle.style.display = 'block';
+                        invoicebtncontainer.style.display = 'block';
+
                     });
             });
+          
+
+
         </script>
         
         
