@@ -102,7 +102,6 @@
     margin-right: 5px;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>* {}
 
 @media screen and (max-width: 768px) {
     .summary {
@@ -154,6 +153,6 @@
     font-size: 16px;
 }
 .img-qrcode{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
