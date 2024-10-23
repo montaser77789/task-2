@@ -8,7 +8,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <link rel="stylesheet" href="./css/addproduct.cssR">
+    <link rel="stylesheet" href="./css/addproduct.css">
     <title>إضافة منتج</title>
 
 </head>
@@ -102,7 +102,7 @@
         <div class="container mt-5 addproduct-content">
             <h1 class="mb-4 add-title">إضافة منتج</h1>
             <h6 class="mb-4 add-subtitle font-ligth">لوحة التحكم /المنتجات / اضافة منتج</h6>
-            <div class="">
+            <div class=" m-auto">
 
                 <form class="" id="product-form">
 
@@ -111,7 +111,9 @@
                             <label for="file-input" class="file-upload-label">اضف صورة المنتج <span>*</span></label>
                             <img src="./images/Add File.png" alt="Upload Icon" class="img-fluid mb-3 ">
                             <input type="file" id="file-input" class="file-input" accept=".png, .jpeg, .jpg">
+                            <p id="upload-message" class="upload-message" style="display: none; color: green;">الصورة تم رفعها بنجاح!</p>
                         </div>
+                        
                         <div class="mb-3 d-flex justify-content-end gap-3">
                             <button type="reset" class="add-product-btn-cancel">إلغاء</button>
                             <button type="submit" class="add-product-btn">أضف المنتج <i
@@ -272,6 +274,17 @@
                 }
             }
         }
+        document.getElementById('file-input').addEventListener('change', function() {
+            console.log(this.files);
+            
+            const uploadMessage = document.getElementById('upload-message');
+            if (this.files.length > 0) {
+                uploadMessage.style.display = 'block'; // إظهار الرسالة
+            } else {
+                uploadMessage.style.display = 'none'; // إخفاء الرسالة إذا لم يتم اختيار صورة
+            }
+            });
+
 
 
     </script>

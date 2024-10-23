@@ -34,6 +34,7 @@
 body {
   background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 .add-title {
@@ -414,4 +415,8 @@ label span {
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.addproduct-content{
+  margin-right: 100px;
 }
