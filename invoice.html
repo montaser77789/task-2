@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-md-3">
+                        <div class="col-md-6 invoice-profile-details">
                             <div class="summary">
                                 <div class="d-flex justify-content-between align-items-center w-50 mb-2">
                                     <h5>حجز:</h5>
@@ -216,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9 table-responsive">
+                        <div class="col-md-6 table-responsive">
                             <table class="table table-hover text-center">
                                 <thead>
                                     <tr>
@@ -319,75 +319,96 @@
         <script src="./js/sidepar-navbar.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
         <script>
-        document.getElementById('print-btn').addEventListener('click', function () {
-    const element = document.getElementById('content-to-print');
-    const strongInvoices = document.querySelectorAll('.invoice-profile strong');
-    const summary = document.querySelectorAll('.summary div h5');
-    
-    strongInvoices.forEach(strong => {
-        strong.style.fontSize = '10px';
-    });
-    
-    summary.forEach(h5 => {
-        h5.style.fontSize = '10px';
-    });
-
-    const buttonsDiv = document.querySelector('.btn-print').parentElement; 
-    const addsubtitle = document.querySelector('.add-subtitle');
-    const invoicebtncontainer = document.querySelector('.invoice-btn-container');
-    const footer = document.querySelector('.footer');
-    
-    buttonsDiv.style.display = 'none';
-    addsubtitle.style.display = 'none';
-    invoicebtncontainer.style.display = 'none';
-    footer.style.display = 'none';
-
-    // Generate the PDF
-    html2pdf()
-        .from(element)
-        .set({
-            margin: [0, 1, 1, 1],
-            filename: 'document.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2, scrollY: 0 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-        })
-        .save()
-        .then(() => {
-            // Show elements again after PDF generation
-            buttonsDiv.style.display = 'block';
-            addsubtitle.style.display = 'block';
-            invoicebtncontainer.style.display = 'block';
-            footer.style.display = 'block';
-
-            // Restore font size after PDF generation
-            strongInvoices.forEach(strong => {
-                strong.style.fontSize = '';
+            document.getElementById('print-btn').addEventListener('click', function () {
+                const element = document.getElementById('content-to-print');
+                const strongInvoices = document.querySelectorAll('.invoice-profile strong');
+                const summary = document.querySelectorAll('.summary div h5');
+                const tableresponsive = document.querySelector('.table-responsive');
+                const invoiceprofile = document.querySelector('.invoice-profile-details');
+                
+                // تعديل حجم الخط مؤقتًا
+                strongInvoices.forEach(strong => {
+                    strong.style.fontSize = '10px';
+                });
+                
+                summary.forEach(h5 => {
+                    h5.style.fontSize = '10px';
+                });
+            
+                const buttonsDiv = document.querySelector('.btn-print').parentElement;
+                const addsubtitle = document.querySelector('.add-subtitle');
+                const invoicebtncontainer = document.querySelector('.invoice-btn-container');
+                const footer = document.querySelector('.footer');
+            
+                // تعديل تنسيق الأعمدة
+                invoiceprofile.classList.add('col-md-3');
+                tableresponsive.classList.add('col-md-9');
+                invoiceprofile.classList.remove('col-md-6');
+                tableresponsive.classList.remove('col-md-6');
+            
+                // إخفاء العناصر التي لا ترغب في طباعتها
+                buttonsDiv.style.display = 'none';
+                addsubtitle.style.display = 'none';
+                invoicebtncontainer.style.display = 'none';
+                footer.style.display = 'none';
+            
+                // توليد ملف PDF
+                html2pdf()
+                    .from(element)
+                    .set({
+                        margin: [0, 1, 1, 1],
+                        filename: 'document.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2, scrollY: 0 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    })
+                    .save()
+                    .then(() => {
+                        // استعادة العناصر بعد التوليد
+                        buttonsDiv.style.display = 'block';
+                        addsubtitle.style.display = 'block';
+                        invoicebtncontainer.style.display = 'block';
+                        footer.style.display = 'block';
+            
+                        // استعادة التنسيق
+                        invoiceprofile.classList.remove('col-md-3');
+                        invoiceprofile.classList.add('col-md-6');
+                        tableresponsive.classList.remove('col-md-9');
+                        tableresponsive.classList.add('col-md-6');
+            
+                        // استعادة حجم الخط
+                        strongInvoices.forEach(strong => {
+                            strong.style.fontSize = '';
+                        });
+                        summary.forEach(h5 => {
+                            h5.style.fontSize = '';
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error generating PDF:', error);
+            
+                        // استعادة العناصر في حالة حدوث خطأ
+                        buttonsDiv.style.display = 'block';
+                        addsubtitle.style.display = 'block';
+                        invoicebtncontainer.style.display = 'block';
+                        footer.style.display = 'block';
+            
+                        // استعادة التنسيق
+                        invoiceprofile.classList.remove('col-md-3');
+                        invoiceprofile.classList.add('col-md-6');
+                        tableresponsive.classList.remove('col-md-9');
+                        tableresponsive.classList.add('col-md-6');
+            
+                        // استعادة حجم الخط
+                        strongInvoices.forEach(strong => {
+                            strong.style.fontSize = '';
+                        });
+                        summary.forEach(h5 => {
+                            h5.style.fontSize = '';
+                        });
+                    });
             });
-            summary.forEach(h5 => {
-                h5.style.fontSize = '';
-            });
-        })
-        .catch(error => {
-            console.error('Error generating PDF:', error);
-
-            // Show elements again in case of error
-            buttonsDiv.style.display = 'block';
-            addsubtitle.style.display = 'block';
-            invoicebtncontainer.style.display = 'block';
-            footer.style.display = 'block';
-
-            // Restore font size in case of error
-            strongInvoices.forEach(strong => {
-                strong.style.fontSize = '';
-            });
-
-            summary.forEach(h5 => {
-                h5.style.fontSize = '';
-            });
-        });
-});
-
-        </script>
+            </script>
+            
 </body>
 </html>
