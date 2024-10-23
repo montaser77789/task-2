@@ -33,7 +33,61 @@
     flex-wrap: wrap;
 
 }
+.table-responsive {
+    max-height: 60vh;
+    /* يمكنك تعديل الارتفاع حسب الحاجة */
+    overflow-y: auto;
+    /* تمكين التمرير العمودي */
+    overflow-x: auto;
+    /* تمكين التمرير الأفقي */
+  }
+  
+  .table {
+    width: 100%;
+    /* تأكد من أن الجدول يشغل العرض الكامل */
+  }
+  @media (max-width: 768px) {
 
+    .table th,
+    .table td {
+      font-size: 0.8rem;
+      /* Adjust font size for smaller screens */
+    }
+  
+  
+  
+    .table .btn {
+      font-size: 0.8rem;
+      /* Adjust button font size for smaller screens */
+    }
+  
+    .table-responsive {
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: auto;
+      max-width: 314px;
+  
+  
+    }
+  
+    .table {
+      width: 100%;
+  
+    }
+  
+  
+  }
+  
+  .table>:not(caption)>*>* {
+    padding: 1.5rem 0.5rem !important;
+    background-color: var(--bs-table-bg) !important;
+    border-bottom-width: 0 !important;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg) !important;
+  }
+  .table th, .table td {
+    white-space: nowrap;
+    font-family: initial;
+}
 .invoice-btn {
     width: 258px;
     height: 56px;
