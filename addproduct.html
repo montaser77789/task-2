@@ -275,15 +275,15 @@
             }
         }
         document.getElementById('file-input').addEventListener('change', function() {
-            console.log(this.files);
-            
-            const uploadMessage = document.getElementById('upload-message');
-            if (this.files.length > 0) {
-                uploadMessage.style.display = 'block'; // إظهار الرسالة
-            } else {
-                uploadMessage.style.display = 'none'; // إخفاء الرسالة إذا لم يتم اختيار صورة
-            }
-            });
+    const uploadMessage = document.getElementById('upload-message');
+    if (this.files.length > 0) {
+        const fileName = this.files[0].name; // الحصول على اسم الملف
+        uploadMessage.textContent = `الصورة تم رفعها بنجاح: ${fileName}`; // تحديث النص
+        uploadMessage.style.display = 'block'; // إظهار الرسالة
+    } else {
+        uploadMessage.style.display = 'none'; // إخفاء الرسالة إذا لم يتم اختيار صورة
+    }
+});
 
 
 
